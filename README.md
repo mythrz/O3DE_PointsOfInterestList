@@ -64,6 +64,10 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [Sound/blog/chat/comunity focused on Audio/Sound](https://www.airwiggles.com/feed)
 
+[Mini Audio O3DE Gem](https://github.com/SelfishOlex/MiniAudioO3DE) and [Site](https://miniaud.io/)
+
+[Audio gem for Lumberyard](https://github.com/alatnet/Lumberyard-Alternative-Audio-Gem)
+
 ---
 
 ### Import Assets
@@ -136,6 +140,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@zDmyth O3DE: Broadcast Script Events (2/2)](https://www.youtube.com/watch?v=3Et-JQsJ-KU)
 
+[Script Transpiler](https://github.com/lumbermixalot/ScriptEvent_Transpiler)
+
 ---
 
 ### Render Pipeline and Atom Renderer
@@ -158,6 +164,10 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 ### Lua 
 
+[LyShine Code Examples](https://github.com/o3de/o3de/tree/b94667fcf56b0af11f94632b71bbedc64ae6536e/Gems/LyShineExamples/Assets/UI/Scripts/LyShineExamples)
+
+[Lua.org docs](https://www.lua.org/manual/5.4/)
+
 [@TheDevShop Lumberyard Series Getting Started with Lua - Settings up scripts, variables and more...](https://www.youtube.com/watch?v=mZ4ySndqmGw)
 
 [@TheDevShop Lumberyard Script Communication - Health and UI](https://www.youtube.com/watch?v=bs6usnB_ra4)
@@ -165,6 +175,14 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 [Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=lumbermixalot.o3de-lua-debug) [GitHub project of the extension](https://github.com/lumbermixalot/vscode-dbg-ext-o3de-lua)
 
 [@rzDmyth O3DE: Debugging with Lua Editor](https://www.youtube.com/watch?v=SCxRy5J5Pgs)
+
+[@DevJeeper Multiple Inheritance class with multiple parents Lua Tutorial 2021](https://www.youtube.com/watch?v=1BFoprD30dE&list=PLL8RfupSJ6y0D2aKu9ozXx2cgEx8R07Jf)
+
+[@omggomb8131 Lua scripting in Lumberyard 1.7](https://www.youtube.com/watch?v=bIXiXQkO11k&lc=UgxugSeE6SJYciEkReR4AaABAg.9tkfiSyMosX9tkmCe5v0pZ)
+
+[Lumberyard/O3DE Code Samples](https://github.com/drburton/Lua-for-Lumberyard)
+
+[Lumberyard Book code samples](https://github.com/Apress/beginning-game-dev-with-amazon-lumberyard)
 
 ---
 
@@ -230,6 +248,28 @@ Similar to UE5 Blueprints
 
 ---
 
+### Databases Data Storage
+
+[SQLite Lumberyard Gem](https://github.com/alatnet/Lumberyard-SQLite-Gem)
+
+[Postgree SQL Gem for Lumberyard](https://github.com/ash-j-f/PLY-public)
+
+---
+
+### Extend Editor Tools or functionality
+
+[Lumberyard code sample to add a Menu Action](https://github.com/thirdkindgames/lumberyard-project-menu)
+
+[Lumberyard code snippets](https://github.com/horvay/lumberyard-snippets)
+
+[C++ Hot reload prototype](https://github.com/CppHotReload/Lumberyard)
+
+[List of other gems for Lumberyard](https://github.com/ExQDev/lumberyard-gems)
+
+[Build digraph by scanning EBuses](https://github.com/SelfishOlex/EBusScanner)
+
+--- 
+
 ### Game Analytics
 
 [@rzDmyth AWS Game Analytics and Open 3D Engine O3DE](https://www.youtube.com/watch?v=FOK6NJPp4Qk)
@@ -248,6 +288,8 @@ O3DE Concepts and Basics [RogerDurañonaVargas O3DE tutorial: the most basic con
 
 Old Lumberyard channel with multiple examples, tutorials and tips. Many of these things can be repurposed into O3DE. [@ProfBurton Auto Backup in O3DE](https://www.youtube.com/watch?v=FB1PMMvtHIQ&list=PLxgtJR7f0RBK7MO7tK7yCmR_h8KtHz9oW&ab_channel=BurtonsMediaGroup)
 
+Old Official Lumberyard channel. Used to have multiple tutorials, they have now hidden or deleted most of them :\ [Official Lumberyard Tutorials](https://www.youtube.com/@AmazonLumberyardTutorials)
+
 ---
 
 ### Game Templates and Tool-Kits
@@ -262,6 +304,16 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 
 [Vehicle assets sample + Vehicle Dynamics Gem by RobotecAI](https://github.com/pawelbudziszewski/o3de-sample-vehicle-assets)
 
+[Volumetric Clouds Gem and Demo](https://github.com/lumbermixalot/VolumetricCloudsForO3DE)
+
+[Showcase anti-aliasing and transparency features in the Lumberyard game engine](https://github.com/nginetechnologies/sample-bistro.nproject)
+
+[Amazong Game-Lift](https://github.com/zeliard/GameLift)
+
+[Amazon Lumberyard Engine-Source code](https://github.com/aws/lumberyard)
+
+[Lumberyard Jam](https://github.com/kangareuben/LumberyardJam)
+
 ---
 
 ### Documentation
@@ -270,10 +322,16 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 
 [Official O3DE Discord Channel](https://discord.com/invite/o3de)
 
+[Old Lumberyard Documentation](https://github.com/awsdocs/amazon-lumberyard-user-guide)
+
 ---
 
 ### Books
 
 [Game Programming with Open 3D Engine from GitHub](https://github.com/SelfishOlex/O3DEBookCode2111) or [Game Programming with Open 3D Engine webpage](https://olexgamedev.itch.io/game-programming-with-o3de)
+
+[Game Programming with Amazon Lumberyard, 1.20](https://www.amazon.com/dp/1723700827/ref=cm_sw_r_cp_ep_dp_09I0BbR1Z03CH) [Projects source code](https://github.com/SelfishOlex/LYBook_1.20) [Projects Source code](https://github.com/SelfishOlex/LYBook_1.22) [Projects Source code](https://github.com/SelfishOlex/LYBook_1.27)  [Projects source code](https://github.com/SelfishOlex/GridMateLab2) 
+
+[Beginning Game Development with Amazon Lumberyard](https://link.springer.com/book/10.1007/978-1-4842-5073-0). Projects source code is: [here](https://github.com/Apress/beginning-game-dev-with-amazon-lumberyard)
 
 ---
