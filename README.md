@@ -162,6 +162,12 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 ---
 
+### Shader
+
+[RenderJoy 2.0](https://github.com/lumbermixalot/RenderJoy)
+
+---
+
 ### Lua 
 
 [LyShine Code Examples](https://github.com/o3de/o3de/tree/b94667fcf56b0af11f94632b71bbedc64ae6536e/Gems/LyShineExamples/Assets/UI/Scripts/LyShineExamples)
