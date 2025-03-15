@@ -192,6 +192,16 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 ---
 
+### Custom Editor Tools
+
+[Create a Custom Tool Gem in Python to Extend Open 3D Engine Editor](https://docs.o3de.org/docs/learning-guide/tutorials/extend-the-editor/shape-example-py/)
+
+[Create a Custom Tool Gem in C++ to Extend Open 3D Engine Editor](https://docs.o3de.org/docs/learning-guide/tutorials/extend-the-editor/shape-example-cpp/)
+
+[@rzDmyth](https://youtu.be/HLlTjx0UfBY)
+
+---
+
 ### Script Canvas
 
 Similar to UE5 Blueprints
