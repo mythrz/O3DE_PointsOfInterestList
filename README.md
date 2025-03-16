@@ -194,6 +194,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 ### Custom Gems and Components creation
 
+[(WIP) Walk‐through: Let's create components in c‐plusplus](https://github.com/o3de/o3de/wiki/(WIP)-Walk%E2%80%90through%3A-Let's-create-components-in-c%E2%80%90plusplus)
+
 [@rzDmyth Open 3D Engine (O3DE): Create C++ Gem and Component](https://www.youtube.com/watch?v=tqhxkLk8NF0)
 
 ---
@@ -335,6 +337,8 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 ### Documentation
 
 [Official O3DE Website](https://www.docs.o3de.org/docs/)
+
+[Official O3DE Wiki](https://github.com/o3de/o3de/wiki) You might find some early-version of tutorials or documentation here
 
 [Official O3DE Discord Channel](https://discord.com/invite/o3de)
 
