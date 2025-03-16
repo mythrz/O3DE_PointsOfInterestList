@@ -20,6 +20,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@rzDmyth Install Open 3D Engine (O3DE) with GitHub Developer Branch](https://www.youtube.com/watch?v=u-jpFuwVV1Y)
 
+[Using VSCode to build O3DE](https://github.com/o3de/o3de/wiki/Using-VSCode-to-build-O3DE)
+
 ---
 
 ### Export Project: Executable game
@@ -29,6 +31,18 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 [@TheDevShop O3DE - Creating A RELEASE build for you Project! Manual Set-up](https://www.youtube.com/watch?v=xOX1Lfv6KRg)
 
 --- 
+
+### Android
+
+[The Android Project Generator](https://github.com/o3de/o3de/wiki/The-Android-Project-Generator)
+
+---
+
+### Asset Bundler
+
+[Bundle Game Assets in Open 3D Engine](https://docs.o3de.org/docs/user-guide/packaging/asset-bundler/)
+
+---
 
 ### Create a New Project
 
@@ -170,6 +184,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 ### Lua 
 
+[[Lua] Reflecting Properties to the Editor](https://github.com/o3de/o3de/wiki/%5BLua%5D-Reflecting-Properties-to-the-Editor)
+
 [LyShine Code Examples](https://github.com/o3de/o3de/tree/b94667fcf56b0af11f94632b71bbedc64ae6536e/Gems/LyShineExamples/Assets/UI/Scripts/LyShineExamples)
 
 [Lua.org docs](https://www.lua.org/manual/5.4/)
@@ -181,6 +197,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 [Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=lumbermixalot.o3de-lua-debug) [GitHub project of the extension](https://github.com/lumbermixalot/vscode-dbg-ext-o3de-lua)
 
 [@rzDmyth O3DE: Debugging with Lua Editor](https://www.youtube.com/watch?v=SCxRy5J5Pgs)
+
+[Working With An External Lua Debugger](https://github.com/o3de/o3de/wiki/Working-With-An-External-Lua-Debugger)
 
 [@DevJeeper Multiple Inheritance class with multiple parents Lua Tutorial 2021](https://www.youtube.com/watch?v=1BFoprD30dE&list=PLL8RfupSJ6y0D2aKu9ozXx2cgEx8R07Jf)
 
