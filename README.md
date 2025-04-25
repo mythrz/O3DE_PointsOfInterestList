@@ -90,11 +90,19 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@Open3DEngine Create Scenes in O3DE Using KitBash3D/Blender](https://www.youtube.com/watch?v=Y6qJkdjHHyw)
 
+[@3dteacher O3DE - Importing a Blender Model](https://www.youtube.com/watch?v=EDWQHPMFghQ&list=PLYL9odJYZleKj4QeD7YA0iQcYt_YvlHg8&index=6)
+
 [@genomestudios5714 O3DE Intensive - Blender to O3DE Pipeline](https://www.youtube.com/watch?v=nSf6twdRBVI)
 
 [@rzDmyth O3DE and Blender: Create and import your 3D model (fbx) with separate materials](https://www.youtube.com/watch?v=WDUBGAHAHz0)
 
 --- 
+
+### White Box
+
+[@3dteacher O3DE - White Box Component](https://www.youtube.com/watch?v=Gh4jwqDxYwY&list=PLYL9odJYZleKj4QeD7YA0iQcYt_YvlHg8&index=5)
+
+---
 
 ### Spawning Prefabs
 
@@ -169,6 +177,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 ---
 
 ### Material Editor and Material Canvas
+
+[@3dteacher O3DE Material Editor and Blender Texturing](https://www.youtube.com/watch?v=u2aBSBale3Q&list=PLYL9odJYZleKj4QeD7YA0iQcYt_YvlHg8&index=7) and [@3dteacher Material Editor: Metallic and Roughness Maps](https://www.youtube.com/watch?v=AcJFVm0mBV0&list=PLYL9odJYZleKj4QeD7YA0iQcYt_YvlHg8&index=8)
 
 [@TheDevShop O3DE - Material Editor + Our FIRST MATERIAL! | ATOM Renderer](https://www.youtube.com/watch?v=YMJOqfC3Psk)
 
@@ -260,7 +270,10 @@ Similar to UE5 Blueprints
 
 ### UI
 
+Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com/watch?v=NTmx-YP5iGI), Part 2 [@3dteacher Scripting Our Main Menu](https://www.youtube.com/watch?v=lejCUtLN2aU), Part 3[@3dteacher UI Scripting - Disable Main Menu](https://www.youtube.com/watch?v=jSZiLTmcyJA&list=PLYL9odJYZleKj4QeD7YA0iQcYt_YvlHg8&index=10)
+
 [@rzDmyth Open 3D Engine: UI dynamic slices (Inventory)](https://www.youtube.com/watch?v=HZbuklTPfvA)
+
 
 --- 
 
