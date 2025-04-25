@@ -373,3 +373,11 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 [Beginning Game Development with Amazon Lumberyard](https://link.springer.com/book/10.1007/978-1-4842-5073-0). Projects source code is: [here](https://github.com/Apress/beginning-game-dev-with-amazon-lumberyard)
 
 ---
+
+### Other Interesting Points/Assets
+
+[Human Generator](https://github.com/makehumancommunity/mpfb2)
+
+[Itch Assets](https://itch.io/) and [Universal Animation Library](https://quaternius.itch.io/universal-animation-library)
+
+[Mixamo Animations](https://www.mixamo.com/#/)
