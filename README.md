@@ -150,6 +150,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@TheDevShop O3DE - Building/Setting up PopcornFX! VFX for O3DE](https://www.youtube.com/watch?v=pAfoo4Xsuk0)
 
+General explanation about particles: [Ex-Blizzard Dev Writes A Particle System From Scratch - Never Engine Devlog 1](https://www.youtube.com/watch?v=ahOfNgvQ93Q)
+
 ---
 
 ### Events
