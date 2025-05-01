@@ -297,6 +297,8 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 [@Open3DEngine O3DE Robotics Warehouse Demo](https://www.youtube.com/watch?v=Zx-6VhxqLKc)
 
+[AWS: Running High-fidelity O3DE simulations in AWS RoboMaker](https://aws.amazon.com/blogs/robotics/running-high-fidelity-o3de-simulations-in-aws-robomaker/); [ROSConDemo Dockerfiles](https://github.com/o3de/ROSConDemo/tree/main/docker); [RobotVacuumSample](https://github.com/o3de/RobotVacuumSample/tree/development/Docker)
+
 ---
 
 ### Databases Data Storage
