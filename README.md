@@ -1,4 +1,4 @@
-# O3DE_PointsOfInterestList
+# Open 3D Engine (O3DE) Points Of Interest List
 
 ### Summary 
 
