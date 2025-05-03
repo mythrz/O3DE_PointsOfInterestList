@@ -228,6 +228,8 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 [@rzDmyth Open 3D Engine (O3DE): Create C++ Gem and Component](https://www.youtube.com/watch?v=tqhxkLk8NF0)
 
+[O3DE guidelines: C++ Best practices](https://github.com/o3de/sig-core/blob/main/governance/C%2B%2B-Best-Practices-Guide.md). Issues worth tracking: [Issue 53](https://github.com/o3de/sig-core/issues/53)
+
 ---
 
 ### Custom Editor Tools
