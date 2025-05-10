@@ -349,7 +349,7 @@ Old Official Lumberyard channel. Used to have multiple tutorials, they have now 
 
 ### Game Templates and Tool-Kits
 
-Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stealth, Real-Time Strategy, Turn-Based Tactics, Twin-Stick Shooter. [Minimal O3DE Templates GitHub](https://github.com/loherangrin/templates.o3de.minimal). [@Open3DEngine video](https://www.youtube.com/watch?v=z5VwAG9SC-4)
+Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stealth, Real-Time Strategy, Turn-Based Tactics, Twin-Stick Shooter. [Minimal O3DE Templates GitHub](https://github.com/loherangrin/templates.o3de.minimal). [@Open3DEngine video](https://www.youtube.com/watch?v=z5VwAG9SC-4). [@matteogrs channel](https://www.youtube.com/@matteogrs)
 
 [@StevenHarmonGames O3DE First Person Interaction Toolkit - Setup & Overview](https://www.youtube.com/watch?v=kQ5ckXGn9xE) [Available on GitHub](https://github.com/stevenharmongames/O3DE-FirstPersonInteractionToolkit)
 
