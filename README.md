@@ -347,7 +347,7 @@ Old Official Lumberyard channel. Used to have multiple tutorials, they have now 
 
 ---
 
-### Game Templates and Tool-Kits
+### Game Templates, Jams, Tool-Kits
 
 Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stealth, Real-Time Strategy, Turn-Based Tactics, Twin-Stick Shooter. [Minimal O3DE Templates GitHub](https://github.com/loherangrin/templates.o3de.minimal). [@Open3DEngine video](https://www.youtube.com/watch?v=z5VwAG9SC-4). [@matteogrs channel](https://www.youtube.com/@matteogrs)
 
@@ -368,6 +368,8 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 [Amazon Lumberyard Engine-Source code](https://github.com/aws/lumberyard)
 
 [Lumberyard Jam](https://github.com/kangareuben/LumberyardJam)
+
+[o3de-jam-2305](https://github.com/loherangrin/games.o3de.o3de-jam-2305)
 
 ---
 
