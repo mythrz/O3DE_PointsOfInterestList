@@ -96,6 +96,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@rzDmyth O3DE and Blender: Create and import your 3D model (fbx) with separate materials](https://www.youtube.com/watch?v=WDUBGAHAHz0)
 
+[Kursad-k O3DE Blender bridge](https://github.com/kursad-k/o3de_blender_bridge)
+
 --- 
 
 ### White Box
