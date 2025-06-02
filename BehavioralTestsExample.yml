@@ -1,0 +1,34 @@
+# This workflow will build a .NET project. This is just an example to make use of Github Actions and run some Unit Tests that exist in the project. Same tests as the TestExplorer
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "master" ]
+    paths:
+      - 'MST/**'
+  pull_request:
+    branches: [ "master" ]
+    paths:
+      - 'MST/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: RunBehavioralTestsOnly
+      run: dotnet test --filter "TM_NameOfTest1|
+                                  TM_NameOfTest2|
+                                  TM_NameOfTest3"
