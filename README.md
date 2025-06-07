@@ -375,6 +375,8 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 
 [Newspaper Delivery](https://github.com/o3de/NewspaperDeliveryGame)
 
+[O3DE Feature Showcase projects](https://docs.o3de.org/docs/learning-guide/samples/feature-showcase/)
+
 ---
 
 ### Documentation
