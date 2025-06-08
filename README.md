@@ -146,13 +146,15 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 ---
 
-### Character Input
+### Inputs
 
 [O3DE Github OnInputChannelEventFiltered Fly Camera Example](https://github.com/o3de/o3de/blob/45437bc647e4e1831983d98e3917578bf9302c95/Gems/AtomLyIntegration/AtomBridge/Code/Source/FlyCameraInputComponent.cpp) This one uses raw keycodes. Cpp Code Samples
 
 [O3DE GitHub StartingPointInput uses InputBindings and InputComponent](https://github.com/o3de/o3de/tree/45437bc647e4e1831983d98e3917578bf9302c95/Gems/StartingPointInput) This one uses InputBindings and Events (Bus and broadcast). Cpp Code Samples
 
 [Discord discussion about the two approaches above](https://discord.com/channels/805939474655346758/842098167436279869/1380942733388152943)
+
+[Porcupine example](https://github.com/Porcupine-Factory/FirstPersonController/blob/main/Code/Source/Clients/FirstPersonControllerComponent.cpp)
 
 ---
 
