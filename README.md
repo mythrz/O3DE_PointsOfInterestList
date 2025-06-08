@@ -401,6 +401,8 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 
 [Old Lumberyard Documentation](https://github.com/awsdocs/amazon-lumberyard-user-guide)
 
+[Doxygen API documentation](https://docs.o3de.org/docs/api/gems/) This is really really good to search for features and methods of each component and gem. This is updated every few weeks/months.
+
 ---
 
 ### Books
