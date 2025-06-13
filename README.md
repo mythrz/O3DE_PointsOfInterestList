@@ -20,7 +20,7 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@rzDmyth Install Open 3D Engine (O3DE) with GitHub Developer Branch](https://www.youtube.com/watch?v=u-jpFuwVV1Y)
 
-[Using VSCode to build O3DE](https://github.com/o3de/o3de/wiki/Using-VSCode-to-build-O3DE)
+[Using VSCode to build O3DE or just debug](https://github.com/o3de/o3de/wiki/Using-VSCode-to-build-O3DE)
 
 ---
 
