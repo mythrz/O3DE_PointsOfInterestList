@@ -22,6 +22,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [Using VSCode to build O3DE or just debug](https://github.com/o3de/o3de/wiki/Using-VSCode-to-build-O3DE)
 
+[O3DE binaries](https://o3debinaries.org/download/linux.html)
+
 ---
 
 ### Export Project: Executable game
