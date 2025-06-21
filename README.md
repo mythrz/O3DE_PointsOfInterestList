@@ -391,6 +391,8 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 
 [O3DE Feature Showcase projects](https://docs.o3de.org/docs/learning-guide/samples/feature-showcase/)
 
+[Port to O3DE of the lumberyard project](https://github.com/o3de/startergame-assets)
+
 ---
 
 ### Documentation
