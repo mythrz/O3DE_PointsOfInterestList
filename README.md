@@ -341,6 +341,14 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 --- 
 
+### Profiler, Performance analysis
+
+[O3DE official docs on how to enable profilers](https://www.docs.o3de.org/docs/user-guide/profiling/cpu_profiling/#enabling-the-built-in-profiler-gem)
+
+[@CppCon An Introduction to Tracy Profiler in C++ - Marcos Slomp - CppCon 2023](https://www.youtube.com/watch?v=ghXk3Bk5F2U&t=36s)
+
+---
+
 ### Game Analytics
 
 [@rzDmyth AWS Game Analytics and Open 3D Engine O3DE](https://www.youtube.com/watch?v=FOK6NJPp4Qk)
