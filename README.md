@@ -401,6 +401,8 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 
 [Port to O3DE of the lumberyard project](https://github.com/o3de/startergame-assets)
 
+[Turn Based: Planet Survival Game](https://github.com/o3de/PlanetSurvivalGame)
+
 ---
 
 ### Documentation
