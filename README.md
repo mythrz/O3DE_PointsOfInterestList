@@ -24,6 +24,9 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [O3DE binaries](https://o3debinaries.org/download/linux.html)
 
+[@genomestudios5714
+ Setting up your Environment with VSCode and Ninja Build](https://www.youtube.com/watch?v=Kp0RjwijRaU)
+
 ---
 
 ### Export Project: Executable game
@@ -182,6 +185,8 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 [Script Transpiler](https://github.com/lumbermixalot/ScriptEvent_Transpiler)
 
+[@genomestudios5714 Diving Into Events, Communicating Between Components](https://www.youtube.com/watch?v=LEfdW5Ba8F8)
+
 ---
 
 ### Render Pipeline and Atom Renderer
@@ -245,6 +250,11 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 [@rzDmyth Open 3D Engine (O3DE): Create C++ Gem and Component](https://www.youtube.com/watch?v=tqhxkLk8NF0)
 
 O3DE guidelines: [C++ Best practices](https://github.com/o3de/sig-core/blob/main/governance/C%2B%2B-Best-Practices-Guide.md); [Coding Standards and Style](https://github.com/o3de/sig-core/blob/main/governance/Coding-Standards-and-Style-Guide.md); [API-ref](https://github.com/o3de/sig-core/blob/main/governance/API-Ref-Guidelines-Update.md); [Triage](https://github.com/o3de/sig-core/blob/main/governance/TRIAGE_GUIDE.md); [SIG Core Charter](https://github.com/o3de/sig-core/blob/main/governance/SIG%20Core%20Charter.md). Issues worth tracking: [Issue 53](https://github.com/o3de/sig-core/issues/53)
+
+[@genomestudios5714
+ Anatomy of a Gem](https://www.youtube.com/watch?v=sOYinaWb264)
+
+[@genomestudios5714 Components, Events, and Reflection](https://www.youtube.com/watch?v=RvtMgBBoifo)
 
 ---
 
