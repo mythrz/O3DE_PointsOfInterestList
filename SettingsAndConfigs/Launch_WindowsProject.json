@@ -1,0 +1,116 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+         {
+            "name": "O3DE Game",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/windows/bin/profile/Project092.GameLauncher.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "externalTerminal"
+        },
+        {
+            "name": "O3DE Editor",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/windows/bin/profile/Editor.exe",
+            "args": [
+                 "--project-path",
+                 "${workspaceFolder}"
+             ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "externalTerminal"
+        },
+        {
+            "name": "(MSVC) Attach",
+            "type": "cppvsdbg",
+            "request": "attach",
+            "processId": "",
+            "visualizerFile": "${workspaceFolder}/Code/Framework/AzCore/Platform/Common/VisualStudio/AzCore/Natvis/azcore.natvis"
+        },
+        {
+            "name": "Python: AutomatedTesting_DynamicVegetationTest_Main_Optimized",
+            "type": "python",
+            "request": "launch",
+            "justMyCode": true,
+            "python": "${command:python.interpreterPath}",
+            "module": "pytest",
+            "cwd": "${command:cmake.buildDirectory}",
+            "args": [
+                "-v",
+                "--show-capture=stdout",
+                "-c",
+                "${workspaceFolder}/pytest.ini",
+                "--build-directory",
+                "${command:cmake.getLaunchTargetDirectory}",
+                "--output-path",
+                "${command:cmake.buildDirectory}/Testing/LyTestTools/AutomatedTesting_DynamicVegetationTests_Main_Optimized",
+                "${workspaceFolder}/AutomatedTesting/Gem/PythonTests/largeworlds/dyn_veg/TestSuite_Main.py::TestAutomation::test_PrefabInstanceSpawner_External_E2E_Editor[windows-AutomatedTesting-windows_editor]"
+            ]
+        },
+        {
+            "name": "(Windows) Launch AzCore.Tests",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.buildDirectory}/bin/${command:cmake.buildType}/AzTestRunner.exe",
+            "args": [
+                "AzCore.Tests.dll",
+                "AzRunUnitTests",
+                "--gtest_filter=TimeTests.QueryCPUThreadTime_ReturnsNonZero"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "visualizerFile": "${workspaceFolder}/Code/Framework/AzCore/Platform/Common/VisualStudio/AzCore/Natvis/azcore.natvis"
+        },
+        {
+            "name": "(Windows) Launch AzFramework.Tests",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.buildDirectory}/bin/${command:cmake.buildType}/AzTestRunner.exe",
+            "args": [
+                "AzFramework.Tests.dll",
+                "AzRunUnitTests",
+                "--gtest_filter=*",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "visualizerFile": "${workspaceFolder}/Code/Framework/AzCore/Platform/Common/VisualStudio/AzCore/Natvis/azcore.natvis"
+        },
+        {
+            "name": "(Windows) Launch AzToolsFramework.Tests",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.buildDirectory}/bin/${command:cmake.buildType}/AzTestRunner.exe",
+            "args": [
+                "AzToolsFramework.Tests.dll",
+                "AzRunUnitTests",
+                "--gtest_filter=*",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "visualizerFile": "${workspaceFolder}/Code/Framework/AzCore/Platform/Common/VisualStudio/AzCore/Natvis/azcore.natvis"
+        },
+        {
+            "name": "(Windows) Launch AssetBundler.Tests",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.buildDirectory}/bin/${command:cmake.buildType}/AssetBundler.Tests.exe",
+            "args": [
+                "--unittest",
+                "--gtest_filter=*"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "visualizerFile": "${workspaceFolder}/Code/Framework/AzCore/Platform/Common/VisualStudio/AzCore/Natvis/azcore.natvis"
+        }
+    ]
+}
