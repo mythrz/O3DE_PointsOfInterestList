@@ -1,0 +1,19 @@
+{
+  "cmake.sourceDirectory": "${workspaceFolder}",
+  "cmake.generator":       "Visual Studio 17 2022",
+  "cmake.buildDirectory":  "${workspaceFolder}/build/windows",
+  "cmake.configureArgs": [
+    "-DLY_3RDPARTY_PATH=C:/O3DE_Files/o3de-packages",
+    "-DLY_ENABLE_TESTS=ON",
+    "-DPAL_TRAIT_BUILD_TESTS_SUPPORTED=ON"
+  ],
+  "cmake.buildArgs": [
+    "--config", "Profile"
+  ],
+  "cmake.buildBeforeRun": true,
+
+  "cmake.ctestArgs": [
+    "--build-config", "Profile",
+    "--output-on-failure"
+  ],
+}
