@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "YourGemName",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:\\O3DE_Files\\Projects\\Project092\\build\\windows\\bin\\profile\\AzTestRunner.exe",
+            "args": [
+                "C:\\O3DE_Files\\Projects\\Project092\\build\\windows\\bin\\profile\\YourGemName.Tests.dll",
+                "AzRunUnitTests"
+            ],
+            "environment": [
+            ],
+            "console": "externalTerminal",
+        }
+    ]
+}
