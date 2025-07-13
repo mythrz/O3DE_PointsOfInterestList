@@ -1,0 +1,172 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "0. Configure Engine Windows-VS17 (Custom)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-B",
+                "build/windows",
+                "-S",
+                ".",
+                "-G",
+                "Visual Studio 17 2022",
+                "-DLY_3RDPARTY_PATH=C:/O3DE_Files/o3de-packages"
+            ],
+            "options": {
+                "cwd": "C:/O3DE_Files/o3de"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "detail": "Configure O3DE engine with Visual Studio 17 2022"
+        },
+        {
+            "label": "1. Build Engine-Profile (Custom)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build/windows",
+                "--target",
+                "Editor",
+                "--config",
+                "profile",
+                "--",
+                "-m"
+            ],
+            "options": {
+                "cwd": "C:/O3DE_Files/o3de"
+            },
+            "group": "build",
+            "problemMatcher": "$msCompile",
+            "detail": "Build the Editor target in profile configuration"
+        },
+        
+        {
+            "label": "2.a Configure Project Windows-VS17 (Custom)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--preset",
+                "windows-vs17"
+            ],
+             "options": {
+                "cwd": "C:/O3DE_Files/Projects/Project092"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Configure Project for Windows OS with Visual Studio 17 2022"
+        },
+        {
+            "label": "2.b Configure Compile Commands Ninja (Custom)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--preset",
+                "compile-commands-ninja"
+            ],
+             "options": {
+                "cwd": "C:/O3DE_Files/Projects/Project092"
+            },
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Generate Compile Commands with Ninja"
+        },
+        {
+            "label": "3. Build Project Profile (Custom)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "--preset",
+                "build-project-editor-profile",
+                "--",
+                "-m"
+            ],
+            "options": {
+                "cwd": "C:/O3DE_Files/Projects/Project092"
+            },
+            "group": "build",
+            "problemMatcher": "$msCompile",
+            "detail": "Build the project for Windows OS"
+        },
+        {
+            "label": "4.a Build Entities088v3.Tests (Custom)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build/windows",
+                "--target",
+                "Entities088v3.Tests",
+                "--config",
+                "profile"
+            ],
+            "options": {
+                "cwd": "C:/O3DE_Files/Projects/Project092"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$msCompile",
+            "detail": "Build Test.dll from the project build subfolder"
+        },
+        {
+            "label": "4.b Run Entities088v3.Tests (Custom)",
+            "type": "shell",
+            "command": "ctest",
+            "args": [
+                "--build-config",
+                "profile",
+                "--output-on-failure"
+            ],
+            "options": {
+                "cwd": "C:/O3DE_Files/Projects/Project092/build/windows"
+            },
+            "group": "test",
+            "problemMatcher": [],
+             "detail": "Execute CTest Entities088v3.Tests"
+        },
+        {
+            "label": "4.c Number of Tests in Entities088v3.Tests (Custom)",
+            "type": "shell",
+            "command": "ctest",
+            "args": [
+                "--build-config",
+                "profile",
+                "-N",
+                "--output-on-failure"
+            ],
+            "options": {
+                "cwd": "C:/O3DE_Files/Projects/Project092/build/windows"
+            },
+            "group": "test",
+            "problemMatcher": [],
+             "detail": "Execute CTest Entities088v3.Tests"
+        },
+        {
+        "label": "4.d List Google Tests in Entities088v3.Tests (Custom)",
+        "type": "shell",
+        "command": "C:/O3DE_Files/Projects/Project092/build/windows/bin/profile/AzTestRunner.exe",
+        "args": [
+            "Entities088v3.Tests.dll",
+            "AzRunUnitTests",
+            "--gtest_list_tests"
+        ],
+        "options": {
+            "cwd": "C:/O3DE_Files/Projects/Project092/build/windows/bin/profile"
+        },
+        "group": "test",
+        "problemMatcher": [],
+        "detail": "List available Google Test from Entities088v3.Tests.dll"
+        }
+    ]
+}
