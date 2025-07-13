@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build YourGemName.Tests",
+            "type": "shell",
+            "command": "cmake --build C:\\O3DE_Files\\Projects\\Project092\\build\\windows --target YourGemName.Tests --config profile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        }
+    ]
+}
