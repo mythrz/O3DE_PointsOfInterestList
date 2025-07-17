@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "windows-vs17",
+      "displayName": "Windows VS17 (Custom)",
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/build/windows",
+      "hidden": false,
+      "cacheVariables": {
+        "LY_3RDPARTY_PATH": "C:/O3DE_Files/o3de-packages",
+        "LY_UNITY_BUILD": "ON",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF",
+        "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE"
+      }
+    },
+    {
+      "name": "compile-commands-ninja",
+      "displayName": "Compile Commands Ninja (Custom)",
+      "generator": "Ninja Multi-Config",
+      "binaryDir": "${sourceDir}/build/ninja_compilecommands",
+      "hidden": false,
+      "cacheVariables": {
+        "LY_3RDPARTY_PATH": "C:/O3DE_Files/o3de-packages",
+        "LY_UNITY_BUILD": "OFF",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+	      "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "build-project-editor-profile",
+      "displayName": "Build Project (Custom)",
+      "configurePreset": "windows-vs17",
+      "configuration": "profile",
+      "targets": [
+        "Project092.GameLauncher",
+        "Editor"
+      ]
+    }
+  ]
+}
