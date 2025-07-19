@@ -1,5 +1,5 @@
 {
-    "version": 8,
+    "version": 4,
     "configurePresets": [
         {
             "name": "custom-linux-clang-ninja-compile-commands",
@@ -9,7 +9,8 @@
             "cacheVariables": {
                 "LY_3RDPARTY_PATH": "$env{HOME}/O3DE_Files/o3de-packages",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
-                "CMAKE_UNITY_BUILD": "OFF"
+                "CMAKE_UNITY_BUILD": "OFF",
+                "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE"
             }
         },
         {
@@ -20,7 +21,8 @@
             "cacheVariables": {
                 "LY_3RDPARTY_PATH": "$env{HOME}/O3DE_Files/o3de-packages",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF",
-                "CMAKE_UNITY_BUILD": "ON"
+                "CMAKE_UNITY_BUILD": "ON",
+                "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE"
             }
         }
     ],
@@ -31,6 +33,15 @@
             "description": "Build Editor target with profile config",
             "configurePreset": "custom-linux-clang-ninja",
             "targets": ["Editor"],
+            "configuration": "profile",
+            "jobs": 4
+        },
+        {
+            "name": "build-editor-and-AzTestRunner-profile",
+            "displayName": "Build Editor Profile and AzTestRunner (Custom)",
+            "description": "Build Editor target with profile config",
+            "configurePreset": "custom-linux-clang-ninja",
+            "targets": ["Editor", "AzTestRunner", "AtomCore.Tests"],
             "configuration": "profile",
             "jobs": 4
         }
