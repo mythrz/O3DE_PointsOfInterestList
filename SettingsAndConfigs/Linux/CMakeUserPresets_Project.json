@@ -1,0 +1,49 @@
+{
+    "version": 4,
+    "configurePresets": [
+        {
+            "name": "custom-linux-clang-ninja-compile-commands",
+            "displayName": "Linux Clang Ninja (Custom CC)",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/linux_compileCommands",
+            "cacheVariables": {
+                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE_Files/o3de-packages",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_UNITY_BUILD": "OFF",
+                "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE"
+            }
+        },
+        {
+            "name": "custom-linux-clang-ninja",
+            "displayName": "Linux Clang Ninja (Custom)",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/linux",
+            "cacheVariables": {
+                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE_Files/o3de-packages",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF",
+                "CMAKE_UNITY_BUILD": "ON",
+                "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE"
+            }
+        }
+    ],
+    "buildPresets":[
+        {
+            "name": "build-editor-profile",
+            "displayName": "Build Editor Profile (Custom)",
+            "description": "Build Editor target with profile config",
+            "configurePreset": "custom-linux-clang-ninja",
+            "targets": ["Editor", "Project092.GameLauncher"],
+            "configuration": "profile",
+            "jobs": 1
+        },
+        {
+            "name": "build-editor-and-AzTestRunner-profile",
+            "displayName": "Build Editor Profile and AzTestRunner (Custom)",
+            "description": "Build Editor target with profile config",
+            "configurePreset": "custom-linux-clang-ninja",
+            "targets": ["Editor", "Project092.GameLauncher", "AzTestRunner", "AtomCore.Tests"],
+            "configuration": "profile",
+            "jobs": 4
+        }
+    ]
+}
