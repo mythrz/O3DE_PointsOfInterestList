@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "O3DE Game",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/linux/bin/profile/Project092.GameLauncher",
+            "cwd":"${fileDirname}"
+        },
+        {
+            "name": "O3DE Editor",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/linux/bin/profile/Editor",
+            "cwd":"${fileDirname}"
+        }
+    ]
+}
