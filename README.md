@@ -189,6 +189,8 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 [@genomestudios5714 O3DE C++ Intensive - Components, Events, and Reflection](https://youtu.be/RvtMgBBoifo?list=PLFEodmYXEGNVzTdpPgwMjg73xLLfMQAuM&t=2280)
 
+[Documentation about events through interface](https://docs.o3de.org/docs/user-guide/programming/messaging/az-interface/)
+
 ---
 
 ### Render Pipeline and Atom Renderer
