@@ -215,6 +215,18 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 ---
 
+### HDRI
+
+[Polyhaven: High Quality HDR environments](https://blog.polyhaven.com/how-to-create-high-quality-hdri/)
+
+[@RyanKingArt Create your own HDRIs in Blender (Tutorial)](https://www.youtube.com/watch?v=XC1eT6XEZWE)
+
+[@RyanKingArt How to Use Blender’s Built In Sky HDRI Environments](https://www.youtube.com/watch?v=6JW88Xtol7A)
+
+[@tomiviitanen Blender Tutorial: How to Turn HDRi to 3D ENVIRONMENT](https://www.youtube.com/watch?app=desktop&v=rrZiSwXoBVA)
+
+---
+
 ### Lua 
 
 [[Lua] Reflecting Properties to the Editor](https://github.com/o3de/o3de/wiki/%5BLua%5D-Reflecting-Properties-to-the-Editor)
