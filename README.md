@@ -173,7 +173,7 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 ---
 
-### Events
+### Script Events, EBus and Events
 
 [@genomestudios5714 O3DE Intensive - Learning Events Through Physics Character & Decoupling Input](https://www.youtube.com/watch?v=9_RhAtYFhKM)
 
@@ -186,6 +186,8 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 [Script Transpiler](https://github.com/lumbermixalot/ScriptEvent_Transpiler)
 
 [@genomestudios5714 Diving Into Events, Communicating Between Components](https://www.youtube.com/watch?v=LEfdW5Ba8F8)
+
+[@genomestudios5714 O3DE C++ Intensive - Components, Events, and Reflection](https://youtu.be/RvtMgBBoifo?list=PLFEodmYXEGNVzTdpPgwMjg73xLLfMQAuM&t=2280)
 
 ---
 
