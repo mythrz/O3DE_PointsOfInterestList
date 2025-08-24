@@ -388,6 +388,10 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 ---
 
+### Bridges/Extensions with O3DE
+
+[TressFX Maya 2025 Exporter + Curves-to-Hair + O3DE Hair Cards Material](https://github.com/victorhugomagno/Hair_Toolkit_for_O3DE)
+
 ### Other Tutorials
 
 [Project The Moon](https://github.com/o3de/Protect-the-Moon) First Episode: [@Open3DEngine 01 Project Setup](https://www.youtube.com/watch?v=rJBAChtWPCs)
