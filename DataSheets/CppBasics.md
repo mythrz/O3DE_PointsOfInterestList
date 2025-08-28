@@ -1,4 +1,4 @@
-### Prints
+### AZ_Printf, printf
 
 ```cpp
 AZStd::string stringValue = "String test";
@@ -19,10 +19,6 @@ AZ_Printf("Just an entityId", "EntityId: %s", entityIdValue.ToString().c_str());
 unsigned long long unsignedLongLongValue = 0);
 AZ_Printf("At some Component", " unsignedLongLong: %llu ", unsignedLongLongValue);
 ```
-
----
-
-### Warnings
 
 --- 
 
