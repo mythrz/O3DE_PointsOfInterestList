@@ -195,6 +195,12 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 ---
 
+### Physics
+
+[@PorcupineFactory O3DE Physics Grab Gem - Tutorial](https://www.youtube.com/watch?v=nwG3DTUU3Fo)
+
+---
+
 ### Render Pipeline and Atom Renderer
 
 [@Open3DEngine Understanding and Customizing the O3DE Render Pipeline](https://www.youtube.com/watch?v=qEPx5_63HPM)
