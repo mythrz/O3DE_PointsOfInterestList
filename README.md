@@ -479,3 +479,5 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 [Itch Assets](https://itch.io/) and [Universal Animation Library](https://quaternius.itch.io/universal-animation-library)
 
 [Mixamo Animations](https://www.mixamo.com/#/)
+
+[Adobe Alternatives](https://github.com/KenneyNL/Adobe-Alternatives)
