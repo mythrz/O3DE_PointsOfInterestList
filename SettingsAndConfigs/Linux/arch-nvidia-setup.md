@@ -32,6 +32,8 @@ vulkaninfo
 sudo pacman -S vulkan-tools vulkan-icd-loader
 
 ---
+---
+---
 
 ### ZRam set up
 
@@ -45,7 +47,8 @@ zram-size = ram/2
 compression-algorithm = zstd
 swap-priority = 100
 ```
-
+---
+---
 ---
 
 ### ZRam start up (it will always be on through different sessions)
@@ -62,6 +65,8 @@ sudo swapoff /dev/zram0
 
 swapon --show
 
+---
+---
 ---
 
 ### Usual Apps
@@ -107,6 +112,9 @@ Settings:
     "cmake.options.statusBarVisibility": "visible"
 }
 ```
+
+---
+---
 ---
 
 - O3DE
