@@ -23,6 +23,8 @@ nvidia-smi
 
 sudo pacman -S cuda
 
+---
+
 - Vulkan Support
 
 vulkaninfo
@@ -70,6 +72,8 @@ sudo pacman -S blender
 
 prime-run blender
 
+---
+
 - VSCodium
 
 CMake from twxs
@@ -103,6 +107,7 @@ Settings:
     "cmake.options.statusBarVisibility": "visible"
 }
 ```
+---
 
 - O3DE
   
