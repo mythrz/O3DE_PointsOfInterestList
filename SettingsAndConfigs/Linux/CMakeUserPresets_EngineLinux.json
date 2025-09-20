@@ -10,7 +10,8 @@
                 "LY_3RDPARTY_PATH": "$env{HOME}/O3DE_Files/o3de-packages",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_UNITY_BUILD": "OFF",
-                "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE"
+                "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE",
+                "CMAKE_CXX_FLAGS": "-Wno-error -Wno-warnings"
             }
         },
         {
@@ -22,7 +23,8 @@
                 "LY_3RDPARTY_PATH": "$env{HOME}/O3DE_Files/o3de-packages",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF",
                 "CMAKE_UNITY_BUILD": "ON",
-                "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE"
+                "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE",
+                "CMAKE_CXX_FLAGS": "-Wno-error -Wno-warnings"
             }
         }
     ],
