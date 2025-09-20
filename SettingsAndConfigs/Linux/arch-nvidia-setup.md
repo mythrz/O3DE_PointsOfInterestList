@@ -86,6 +86,24 @@ Structured Text Language Support from Serhioromano
 
 YAML from Red Hat
 
+Settings:
+
+```
+{
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.useCMakePresets": "always",
+    "cmake.automaticReconfigure": false,
+    "cmake.configureSettings": {
+        
+    },
+    "cmake.allowUnsupportedPresetsVersions": true,
+    "cmake.options.statusBarVisibility": "visible"
+}
+```
+
 - O3DE
   
 sudo pacman -S git cmake python gcc clang ninja
