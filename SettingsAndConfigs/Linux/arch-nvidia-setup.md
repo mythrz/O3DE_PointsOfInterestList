@@ -123,7 +123,7 @@ sudo pacman -S git cmake python gcc clang ninja
 
 sudo pacman -S git-lfs
 
-Then you should fork, clone the engine source code, create a copy of the existing CMakePresets.json file so the file is in the same root, rename it to CMakeUserPresets.json and copy past the content.
+Then you should fork; clone the engine source code (O3DE\Engines\development\); create a copy of the existing CMakePresets.json file so the file is in the same root; rename it to CMakeUserPresets.json and copy past the content.
 
 Check if "cmake.useCMakePresets" is set to "always" or "auto". CTRL+SHIFT+P -> Cmake: Select Configure Preset, and the presets should be there. IF NOT, reboot your PC, delete the CmakeUserPresets.json and try again (It does not always work at first try)
 
