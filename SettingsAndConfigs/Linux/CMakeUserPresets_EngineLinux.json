@@ -7,7 +7,7 @@
             "generator": "Ninja Multi-Config",
             "binaryDir": "${sourceDir}/build/linux_compileCommands",
             "cacheVariables": {
-                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE_Files/o3de-packages",
+                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_UNITY_BUILD": "OFF",
                 "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE",
@@ -20,7 +20,7 @@
             "generator": "Ninja Multi-Config",
             "binaryDir": "${sourceDir}/build/linux",
             "cacheVariables": {
-                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE_Files/o3de-packages",
+                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF",
                 "CMAKE_UNITY_BUILD": "ON",
                 "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE",
