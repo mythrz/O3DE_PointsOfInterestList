@@ -8,7 +8,10 @@ bool boolValue = true;
 AZ_Printf("Just a boolean:", boolValue ? "True" : "False");
 
 size_t i = 0;
-AZ_TracePrintf("At some Component", " index: %zu ", i);
+AZ_TracePrintf("Just a size_t ", "index: %zu ", i);
+
+float floatValue = 3.14159f;
+AZ_TracePrintf("Just a float: ", "Float value: %f\n", floatValue);
 
 int64_t int64Value = 64;
 printf("just an int64_t: %lld ", int64Value);
