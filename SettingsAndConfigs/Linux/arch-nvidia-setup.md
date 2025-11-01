@@ -128,4 +128,15 @@ Then you should fork; clone the engine source code (O3DE\Engines\development\); 
 Check if "cmake.useCMakePresets" is set to "always" or "auto". CTRL+SHIFT+P -> Cmake: Select Configure Preset, and the presets should be there. IF NOT, reboot your PC, delete the CmakeUserPresets.json and try again (It does not always work at first try)
 
 
+### outros
 
+- social media videos/audio
+
+sudo pacman -S jq
+
+git clone https://github.com/Ld-Hagen/fix-opera-linux-ffmpeg-widevine.git
+cd fix-opera-linux-ffmpeg-widevine
+
+./install.sh
+
+Then restart
