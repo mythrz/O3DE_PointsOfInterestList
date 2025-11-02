@@ -175,7 +175,7 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 ### Script Events, EBus and other Events
 
-[@genomestudios5714 O3DE Intensive - Learning Events Through Physics Character & Decoupling Input](https://www.youtube.com/watch?v=9_RhAtYFhKM)
+[@genomestudios5714 O3DE Intensive - Learning Events Through  Character & Decoupling Input](https://www.youtube.com/watch?v=9_RhAtYFhKM)
 
 [@TheDevShop Lumberyard NEW FEATURE! - Script Events!](https://www.youtube.com/watch?v=QAqLQ6JPNhw)
 
@@ -198,6 +198,8 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 ### Physics
 
 [@PorcupineFactory O3DE Physics Grab Gem - Tutorial](https://www.youtube.com/watch?v=nwG3DTUU3Fo)
+
+[@Open3DEngine O3DE Physics Grab Gem](https://www.youtube.com/watch?v=Ete-UxOXO3c)
 
 ---
 
