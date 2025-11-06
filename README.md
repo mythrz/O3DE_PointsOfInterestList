@@ -448,6 +448,8 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 
 [Turn Based: Planet Survival Game](https://github.com/o3de/PlanetSurvivalGame)
 
+[o3de.org samples and templates](https://docs.o3de.org/docs/learning-guide/samples/templates/)
+
 ---
 
 ### Documentation
@@ -483,3 +485,5 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 [Mixamo Animations](https://www.mixamo.com/#/)
 
 [Adobe Alternatives](https://github.com/KenneyNL/Adobe-Alternatives)
+
+[Mesh2Motion online](https://mesh2motion.org/) and [GitHub mesh2motion app](https://github.com/scottpetrovic/mesh2motion-app/)
