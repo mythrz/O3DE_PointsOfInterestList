@@ -487,3 +487,9 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 [Adobe Alternatives](https://github.com/KenneyNL/Adobe-Alternatives)
 
 [Mesh2Motion online](https://mesh2motion.org/) and [GitHub mesh2motion app](https://github.com/scottpetrovic/mesh2motion-app/)
+
+[Render People](https://renderpeople.com/free-3d-people/)
+
+[Blender Studio](https://studio.blender.org/characters/)
+
+[actorcore](https://actorcore.reallusion.com/auto-rig/animate-export)
