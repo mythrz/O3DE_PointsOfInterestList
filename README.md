@@ -493,3 +493,5 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 [Blender Studio](https://studio.blender.org/characters/)
 
 [actorcore](https://actorcore.reallusion.com/auto-rig/animate-export)
+
+[thebasemesh](https://www.thebasemesh.com/model-library)
