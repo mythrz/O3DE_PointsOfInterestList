@@ -1,4 +1,4 @@
-# Cross-platform naming conventions with O3DE-priority
+# Cross-platform naming conventions
 
 Main focus on Blender and O3DE, while maintaining some coherence between other CADs, Animation and Game Engines. This is for reference only and subject to change.
 
