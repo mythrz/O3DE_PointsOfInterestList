@@ -19,6 +19,10 @@ Main focus on Blender and O3DE, while maintaining some coherence between other C
 | Constants | PascalCase | MaxSpeed, DefaultHealth | Keep consistent |
 | No Hungarian notation | Do not use type prefixes | — | Avoid iCount, fTime, pBuffer, etc. |
 
+Notes:
+- More info available here [O3DE C++ Coding Standards](https://github.com/o3de/sig-core/blob/main/governance/Coding-Standards-and-Style-Guide.md#variable-names)
+- As well as here [C++ Best Practices Guide](https://github.com/o3de/sig-core/blob/main/governance/C%2B%2B-Best-Practices-Guide.md)
+
 ---
 
 ## Characters, rigs, meshes
