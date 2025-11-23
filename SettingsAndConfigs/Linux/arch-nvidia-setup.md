@@ -1,3 +1,22 @@
+### Dual OS suggestions
+
+It is better to have each OS on its own drive/disk. Windows tend to monopolize everything. ESP (EFI System Partition) can be shared if you want a united-experience when booting, but there is a small risk windows might mess up the Linux boot (rare, but might happen with larger windows updates). If you separate it, you need to change the starting disk on BIOS whenever you want to change OS.
+
+Install everything with UEFI, Windows 11 has some requirements during installation. Might require Secure Boot too, but once you install Windows, turn it off so you can install Linux.
+
+- Install Windows first in Drive1
+
+Use UEFI when creating the USB. ESP partition during installation is very small (200 MB), which is not enough for multiple OSs if shared. Increase its size for at least 1GB since it has bootloader, kernel images, initramfs files.
+
+Everything else is straight forward.
+
+- Install Linux second in Drive2
+
+Use UEFI when creating the USB. You can use the same ESP, if you increase its size, else use another one.
+
+---
+---
+---
 
 ### GPU NVidia
 
