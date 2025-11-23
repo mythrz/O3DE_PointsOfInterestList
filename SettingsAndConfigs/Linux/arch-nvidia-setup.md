@@ -1,18 +1,24 @@
-### Dual OS suggestions
+### Dual OS suggestions: E.g. Dual‑Disk Partition Layout (Windows + Arch Linux with systemd‑boot)
 
-It is better to have each OS on its own drive/disk. Windows tend to monopolize everything. ESP (EFI System Partition) can be shared if you want a united-experience when booting, but there is a small risk windows might mess up the Linux boot (rare, but might happen with larger windows updates). If you separate it, you need to change the starting disk on BIOS whenever you want to change OS.
-
-Install everything with UEFI, Windows 11 has some requirements during installation. Might require Secure Boot too, but once you install Windows, turn it off so you can install Linux.
-
+- Consider a layout that separates Windows and Arch Linux onto different disks, each with its own EFI System Partition (ESP).
+- Consider Ventoy USB-pen, since it allows multiple OS to boot from the same pen.
+- Use UEFI when creating the USB
 - Install Windows first in Drive1
-
-Use UEFI when creating the USB. ESP partition during installation is very small (200 MB), which is not enough for multiple OSs if shared. Increase its size for at least 1GB since it has bootloader, kernel images, initramfs files.
-
-Everything else is straight forward.
-
 - Install Linux second in Drive2
 
-Use UEFI when creating the USB. You can use the same ESP, if you increase its size, else use another one.
+Partition Table
+
+| Disk | OS            | Partition | Size           | Filesystem | Mount Point | FS Label   | Encryption | Flags |
+|------|---------------|-----------|----------------|------------|-------------|------------|------------|-------|
+| **Disk 1** | Windows 11 | ESP       | 200 MB–1 GB    | FAT32      | —           | WINESP     | No         | boot, esp |
+|      |               | MSR       | 16 MB          | —          | —           | —          | No         | msftres |
+|      |               | C:        | Rest of disk   | NTFS       | —           | WINOS      | Optional (BitLocker) | msftdata |
+| **Disk 2** | Arch Linux | ESP       | 512 MB–1 GB    | FAT32      | `/boot` or `/efi` | ARCHESP    | No         | boot |
+|      |               | Root `/`  | 30–60 GB       | ext4       | `/`         | ARCHROOT   | Optional (LUKS) | — |
+|      |               | Swap      | 2–32 GB (optional) | swap    | —           | ARCHSWAP   | Optional (LUKS) | swap |
+|      |               | Var `/var` (optional) | 2–20 GB | ext4 | `/var` | ARCHVAR    | Optional (LUKS) | — |
+|      |               | Home `/home` | Remaining space | ext4    | `/home`     | ARCHHOME   | Optional (LUKS) | — | 
+
 
 ---
 ---
