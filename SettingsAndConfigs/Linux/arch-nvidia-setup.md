@@ -1,19 +1,21 @@
 
-### GPU
+### GPU NVidia
 
-- NVidia
+- quick fix (avoid if you can)
 
 sudo pacman -S nvidia-inst
 
-or
+or (long term support)
 
 sudo pacman -S linux-lts-headers
 
 sudo pacman -S nvidia-lts nvidia-utils
 
-or
+or (latest)
 
 sudo pacman -S nvidia nvidia-utils
+
+- Optional (cuda tools and integrated GPUs)
 
 sudo dracut --force
 
@@ -129,6 +131,10 @@ Check if "cmake.useCMakePresets" is set to "always" or "auto". CTRL+SHIFT+P -> C
 
 
 ### outros
+
+- Calculator
+
+sudo pacman -S qalculate-gtk
 
 - social media videos/audio
 
