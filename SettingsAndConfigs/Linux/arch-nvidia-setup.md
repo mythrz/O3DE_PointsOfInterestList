@@ -40,6 +40,14 @@ or (latest)
 
 sudo pacman -S nvidia nvidia-utils
 
+- Vulkan tools and OpenGL (if needed, but good to know they are there)
+
+glxinfo | grep "OpenGL renderer"
+  
+vulkaninfo | grep deviceName
+
+sudo pacman -S vulkan-tools
+
 - Optional (cuda tools and integrated GPUs)
 
 sudo dracut --force
