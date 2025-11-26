@@ -176,4 +176,13 @@ cd fix-opera-linux-ffmpeg-widevine
 
 ./install.sh
 
+### Troubleshooting
+
+- if the updates stop working, use the package cleanup configuration and remove the cache then:
+
+sudo -Sy
+sudo -Syy
+
+---
+
 Then restart
