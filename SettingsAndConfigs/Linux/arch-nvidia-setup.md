@@ -160,6 +160,42 @@ Then you should fork; clone the engine source code (O3DE\Engines\development\); 
 
 Check if "cmake.useCMakePresets" is set to "always" or "auto". CTRL+SHIFT+P -> Cmake: Select Configure Preset, and the presets should be there. IF NOT, reboot your PC, delete the CmakeUserPresets.json and try again (It does not always work at first try)
 
+If the IDE addons to configure and build are not working due to updates, delete the build/linux folder and do it manually (cmake updates or addon updates rarely break, but when they do they do not tell why... they just report a CMake crash with segfault).
+
+- Config
+
+```
+cmake --preset custom-linux-clang-ninja
+```
+or
+
+```
+cmake \
+  -G "Ninja Multi-Config" \
+  -S /home/d/O3DE/Engines/development/o3de \
+  -B /home/d/O3DE/Engines/development/o3de/build/linux \
+  -DLY_3RDPARTY_PATH=$HOME/O3DE/o3de-packages \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=OFF \
+  -DCMAKE_UNITY_BUILD=ON \
+  -DPAL_TRAIT_BUILD_TESTS_SUPPORTED=TRUE \
+  -DCMAKE_CXX_FLAGS="-Wno-error -Wno-warnings"
+```
+
+- Build
+
+```
+cmake --build --preset build-editor-profile
+```
+or
+```
+cmake \
+  --build /home/d/O3DE/Engines/development/o3de/build/linux \
+  --target Editor \
+  --config profile \
+  --verbose
+```
+
+---
 
 ### outros
 
