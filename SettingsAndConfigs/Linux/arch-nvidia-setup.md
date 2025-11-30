@@ -184,7 +184,7 @@ cmake \
   -B /home/d/O3DE/Engines/development/o3de/build/linux \
   -DLY_3RDPARTY_PATH=$HOME/O3DE/o3de-packages \
   -DCMAKE_EXPORT_COMPILE_COMMANDS=OFF \
-  -DCMAKE_UNITY_BUILD=ON \
+  -DCMAKE_UNITY_BUILD=OFF \
   -DPAL_TRAIT_BUILD_TESTS_SUPPORTED=TRUE \
   -DCMAKE_CXX_FLAGS="-Wno-error -Wno-warnings"
 ```
@@ -206,6 +206,23 @@ cmake \
 (7) scripts/o3de.sh register --this-engine
 
 ---
+
+- Creating the project
+
+scripts/o3de.sh create-project --project-path $HOME/O3DE/Projects/NameOfYourProject
+
+```
+cmake -G "Ninja Multi-Config" \
+  -B build/linux \
+  -DLY_3RDPARTY_PATH="$HOME/O3DE/o3de-packages" \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=OFF \
+  -DCMAKE_UNITY_BUILD=OFF \
+  -DPAL_TRAIT_BUILD_TESTS_SUPPORTED=TRUE
+```
+
+```
+cmake --build build/linux --config profile --target Editor NameOfYourProject.GameLauncher
+```
 
 ### outros
 
