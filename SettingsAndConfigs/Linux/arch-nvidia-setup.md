@@ -230,6 +230,8 @@ cmake --build build/linux --config profile --target Editor NameOfYourProject.Gam
 
 sudo pacman -S qalculate-gtk
 
+---
+
 - social media videos/audio
 
 sudo pacman -S jq
@@ -239,9 +241,38 @@ cd fix-opera-linux-ffmpeg-widevine
 
 ./install.sh
 
+---
+
 - Print-Screen with rectangle selection
 
 sudo pacman -S flameshot
+
+--- 
+
+- Steam (for playing, fun or testing your demos. Assuming you already have most drivers and vulkan)
+
+Follow the official suggestions available here: [archlinux.org Steam](https://wiki.archlinux.org/title/Steam). Summary:
+
+sudo pacman -Syu
+
+sudo nano /etc/pacman.conf (and make sure the following is uncommented)
+
+```
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+
+sudo pacman -Syu
+
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils
+
+sudo pacman -S vulkan-icd-loader lib32-vulkan-icd-loader
+
+sudo reboot
+
+sudo pacman -S steam
+
+---
 
 ### Troubleshooting
 
@@ -250,6 +281,8 @@ sudo pacman -S flameshot
 sudo -Sy
 sudo -Syy
 
+Then restart
+
 ---
 
-Then restart
+
