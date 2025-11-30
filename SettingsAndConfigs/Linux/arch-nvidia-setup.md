@@ -16,7 +16,7 @@ Partition Table
 | **Disk 2** | Arch Linux | ESP       | 2 GB - 6 GB | FAT32      | `/boot` or `/efi` | ARCHESP    | No         | boot |
 |      |               | Root `/`  | 30–60 GB       | ext4       | `/`         | ARCHROOT   | Optional (LUKS) | — |
 |      |               | Swap      | 2–32 GB (optional) | swap    | —           | ARCHSWAP   | Optional (LUKS) | swap |
-|      |               | Var `/var` (optional) | 2–20 GB | ext4 | `/var` | ARCHVAR    | Optional (LUKS) | — |
+|      |               | Var `/var` (optional) | 4–20 GB | ext4 | `/var` | ARCHVAR    | Optional (LUKS) | — |
 |      |               | Home `/home` | Remaining space | ext4    | `/home`     | ARCHHOME   | Optional (LUKS) | — | 
 
 
@@ -58,9 +58,9 @@ glxinfo | grep "OpenGL renderer"
   
 vulkaninfo | grep deviceName
 
-sudo pacman -S vulkan-tools
-
 vulkaninfo
+
+vkcube
 
 sudo pacman -S vulkan-tools vulkan-icd-loader
 
@@ -152,11 +152,19 @@ Settings:
 
 - O3DE
   
-sudo pacman -S git cmake python gcc clang ninja
+sudo pacman -S git cmake python gcc clang ninja git-lfs
 
-sudo pacman -S git-lfs
+Then you should fork; clone the engine source code (O3DE\Engines\development\);
 
-Then you should fork; clone the engine source code (O3DE\Engines\development\); (1) git lfs install (2) git lfs fetch --all (3) git lfs pull (you have to force it through the cmd, cause some IDEs do not do it by default); create a copy of the existing CMakePresets.json file so the file is in the same root; rename it to CMakeUserPresets.json and copy past the content.
+(1) git lfs install
+
+(2) git lfs fetch --all 
+
+(3) git lfs pull (you have to force it through the cmd, cause some IDEs do not do it by default); 
+
+(4) python/get_python.sh
+
+(5) create a copy of the existing CMakePresets.json file so the file is in the same root; rename it to CMakeUserPresets.json and copy past the content.
 
 Check if "cmake.useCMakePresets" is set to "always" or "auto". CTRL+SHIFT+P -> Cmake: Select Configure Preset, and the presets should be there. IF NOT, reboot your PC, delete the CmakeUserPresets.json and try again (It does not always work at first try)
 
@@ -195,6 +203,8 @@ cmake \
   --verbose
 ```
 
+(7) scripts/o3de.sh register --this-engine
+
 ---
 
 ### outros
@@ -211,6 +221,10 @@ git clone https://github.com/Ld-Hagen/fix-opera-linux-ffmpeg-widevine.git
 cd fix-opera-linux-ffmpeg-widevine
 
 ./install.sh
+
+- Print-Screen with rectangle selection
+
+sudo pacman -S flameshot
 
 ### Troubleshooting
 
