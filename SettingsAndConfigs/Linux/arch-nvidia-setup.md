@@ -38,6 +38,8 @@ sudo pacman -S nvidia-lts nvidia-utils
 
 or (latest)
 
+sudo pacman -S linux-headers
+
 sudo pacman -S nvidia nvidia-utils
 
 - Optional (cuda tools and integrated GPUs)
@@ -153,6 +155,8 @@ Settings:
 - O3DE
   
 sudo pacman -S git cmake python gcc clang ninja git-lfs
+
+sudo pacman -S extra/qt5-tools extra/vulkan-headers
 
 Then you should fork; clone the engine source code (O3DE\Engines\development\);
 
