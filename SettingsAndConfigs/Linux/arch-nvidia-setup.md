@@ -160,7 +160,7 @@ sudo pacman -S curl unzip zip tar pkgconf
 
 sudo pacman -S base-devel git
 
-sudo pacman -S git cmake python python-pip gcc clang clang-tools-extra ninja git-lfs llvm lld libc++ perf valgrind cppcheck rapidjson sdl2
+sudo pacman -S git cmake python python-pip gcc clang clang-tools-extra ninja git-lfs llvm lld libc++ perf valgrind cppcheck rapidjson sdl2 ccache
 
 sudo pacman -S libxcb libx11 libxrandr libxinerama libxcursor libxi
 
@@ -181,7 +181,11 @@ sudo pacman -S extra/qt5-tools extra/vulkan-headers
 
 sudo pacman -S boost (Optional this is just a collection of libs, algorithms... in case you need it.)
 
-Then you should fork; clone the engine source code (O3DE\Engines\development\);
+sudo pacman -Syu
+
+reboot
+
+(0) (O3DE -> Engines -> development) fork; clone the engine source code
 
 (1) git lfs install
 
