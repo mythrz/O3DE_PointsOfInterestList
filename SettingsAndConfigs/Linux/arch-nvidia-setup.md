@@ -153,10 +153,33 @@ Settings:
 ---
 
 - O3DE
-  
-sudo pacman -S git cmake python gcc clang ninja git-lfs
+
+yay -S o3de-bin (this fails or skips all files on arch)
+
+sudo pacman -S curl unzip zip tar pkgconf
+
+sudo pacman -S base-devel git
+
+sudo pacman -S git cmake python python-pip gcc clang clang-tools-extra ninja git-lfs llvm lld libc++ perf valgrind cppcheck rapidjson sdl2
+
+sudo pacman -S libxcb libx11 libxrandr libxinerama libxcursor libxi
+
+sudo pacman -S mesa glu
+
+sudo pacman -S alsa-lib openssl
+
+sudo pacman -S qt5-base qt5-tools qt5-declarative qt5-svg qt5-wayland
+sudo pacman -S qt6-base qt6-tools qt6-declarative qt6-svg qt6-wayland
+
+sudo pacman -S doxygen graphviz
+
+sudo pacman -S gtk3 gtk4 glade
+
+sudo pacman -S vulkan-icd-loader vulkan-tools vulkan-headers
 
 sudo pacman -S extra/qt5-tools extra/vulkan-headers
+
+sudo pacman -S boost (Optional this is just a collection of libs, algorithms... in case you need it.)
 
 Then you should fork; clone the engine source code (O3DE\Engines\development\);
 
