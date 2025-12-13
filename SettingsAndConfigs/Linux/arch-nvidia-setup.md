@@ -26,17 +26,13 @@ Partition Table
 
 ### GPU NVidia
 
-- quick fix (avoid if you can)
-
-sudo pacman -S nvidia-inst
-
-or (long term support)
+- for lts (long term support)
 
 sudo pacman -S linux-lts-headers
 
 sudo pacman -S nvidia-lts nvidia-utils
 
-or (latest)
+- or (latest)
 
 sudo pacman -S linux-headers
 
@@ -148,17 +144,19 @@ Settings:
 }
 ```
 
+NOTE: there was one instance that the Kylin addon was not working correctly with CMake. In this circumstances, just configure and build directly from an OS termninal
+
 ---
 ---
 ---
 
-- O3DE
+- (O3DE) Open 3D Engine from source, github
 
-yay -S o3de-bin (this fails or skips all files on arch)
+yay -S o3de-bin (this fails or skips all files on arch. Left it here to aknowledge its existence...)
 
 sudo pacman -S curl unzip zip tar pkgconf
 
-sudo pacman -S base-devel git
+sudo pacman -S base-devel git (optional. the one bellow should cover this. Left it here for Ubuntu users)
 
 sudo pacman -S git cmake python python-pip gcc clang clang-tools-extra ninja git-lfs llvm lld libc++ perf valgrind cppcheck rapidjson sdl2 ccache
 
@@ -168,8 +166,8 @@ sudo pacman -S mesa glu
 
 sudo pacman -S alsa-lib openssl
 
-sudo pacman -S qt5-base qt5-tools qt5-declarative qt5-svg qt5-wayland
-sudo pacman -S qt6-base qt6-tools qt6-declarative qt6-svg qt6-wayland
+sudo pacman -S qt5-base qt5-tools qt5-declarative qt5-svg qt5-wayland (O3DE is currently using this)
+sudo pacman -S qt6-base qt6-tools qt6-declarative qt6-svg qt6-wayland (optional. Eager, in case they change tooling)
 
 sudo pacman -S doxygen graphviz
 
@@ -181,7 +179,7 @@ sudo pacman -S extra/qt5-tools extra/vulkan-headers
 
 sudo pacman -S boost (Optional this is just a collection of libs, algorithms... in case you need it.)
 
-sudo pacman -Syu
+sudo pacman -Syu (advised, so the system is updated)
 
 reboot
 
@@ -211,8 +209,8 @@ or
 ```
 cmake \
   -G "Ninja Multi-Config" \
-  -S /home/d/O3DE/Engines/development/o3de \
-  -B /home/d/O3DE/Engines/development/o3de/build/linux \
+  -S /home/yourUserName/O3DE/Engines/development/o3de \
+  -B /home/yourUserName/O3DE/Engines/development/o3de/build/linux \
   -DLY_3RDPARTY_PATH=$HOME/O3DE/o3de-packages \
   -DCMAKE_EXPORT_COMPILE_COMMANDS=OFF \
   -DCMAKE_UNITY_BUILD=OFF \
@@ -228,7 +226,7 @@ cmake --build --preset build-editor-profile
 or
 ```
 cmake \
-  --build /home/d/O3DE/Engines/development/o3de/build/linux \
+  --build /home/yourUserName/O3DE/Engines/development/o3de/build/linux \
   --target Editor \
   --config profile \
   --verbose
@@ -238,7 +236,7 @@ cmake \
 
 ---
 
-- Creating the project
+- (O3DE) Creating the project
 
 scripts/o3de.sh create-project --project-path $HOME/O3DE/Projects/NameOfYourProject
 
@@ -254,6 +252,23 @@ cmake -G "Ninja Multi-Config" \
 ```
 cmake --build build/linux --config profile --target Editor NameOfYourProject.GameLauncher
 ```
+
+- How to run it (Arch sometimes present strange UI dimensions)
+
+Create a new shortcut and make sure to set some env variables on the Exec
+
+```
+[Desktop Entry]
+Name=O3DE Dev Editor
+GenericName=
+Comment=
+Exec=env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_ENABLE_HIGHDPI_SCALING=1 QT_FONT_DPI=96 /home/yourUserName/O3DE/Projects/SystemPrototypes/build/linux/bin/profile/Editor
+Type=Application
+Icon=application-x-desktop
+Terminal=false
+```
+
+---
 
 ### outros
 
