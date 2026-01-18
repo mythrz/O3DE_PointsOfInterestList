@@ -26,21 +26,33 @@ Partition Table
 
 ### GPU NVidia
 
-- for lts (long term support)
+- LTS kernel headers (if you run linux-lts)
 
-sudo pacman -S linux-lts-headers
+sudo pacman -S linux-lts-headers 
 
-sudo pacman -S nvidia-lts nvidia-utils
-
-- or (latest)
+- Latest kernel headers (if you run the mainline kernel)
 
 sudo pacman -S linux-headers
 
-sudo pacman -S nvidia nvidia-utils
+NOTE: you need to check which one to use now, try it [here](https://wiki.archlinux.org/title/NVIDIA) or [here for endeavour OS](https://forum.endeavouros.com/t/nvidia-gpu-users-attention-please-dec-2025/77119).
+
+- In my case, I tested in a 1060 GTX 6GB (Recommended for GTX 1060 (Pascal))
+
+yay -S lib32-nvidia-580xx-utils nvidia-580xx-utils nvidia-580xx-dkms nvidia-580xx-settings
+
+- For modern GPUs supported by the official driver
+
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils
+
+- Post-install (automatically rebuilds the kernel module (NVIDIA driver) whenever a new kernel is installed
+
+sudo dkms autoinstall 
+
+sudo mkinitcpio -P
+
+sudo reboot
 
 - Optional (cuda tools and integrated GPUs)
-
-sudo dracut --force
 
 sudo pacman -S nvidia-prime
 
