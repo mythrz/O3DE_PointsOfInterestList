@@ -1,0 +1,6 @@
+{
+    /// This points to your compile commands, giving it intellisense, navigation
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build/linux_compileCommands/compile_commands.json"
+    ],
+}
