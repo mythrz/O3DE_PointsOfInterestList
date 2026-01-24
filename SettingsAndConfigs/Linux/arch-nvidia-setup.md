@@ -95,9 +95,10 @@ vkcube
 
 ### ZRam set up
 
+```
 sudo pacman -S zram-generator
-
 sudo nano /etc/systemd/zram-generator.conf
+```
 
 ```
 [zram0]
@@ -105,23 +106,19 @@ zram-size = ram/2
 compression-algorithm = zstd
 swap-priority = 100
 ```
----
----
----
 
-### ZRam start up (it will always be on through different sessions)
+ZRam start up (it will always be on through different sessions)
 
+```
 sudo systemctl daemon-reexec
-
 sudo systemctl restart systemd-zram-setup@zram0.service
-
 swapon --show
-
+```
 - You can also turn ZRam off for a sessions:
-
+```
 sudo swapoff /dev/zram0
-
 swapon --show
+```
 
 ---
 ---
@@ -130,10 +127,10 @@ swapon --show
 ### Usual Apps
 
 - Blender
-
+```
 sudo pacman -S blender
-
 prime-run blender
+```
 
 ---
 
@@ -152,24 +149,6 @@ Kylin CLangd  from KylinldeTeam
 Structured Text Language Support from Serhioromano
 
 YAML from Red Hat
-
-Settings:
-
-```
-{
-    "cmake.pinnedCommands": [
-        "workbench.action.tasks.configureTaskRunner",
-        "workbench.action.tasks.runTask"
-    ],
-    "cmake.useCMakePresets": "always",
-    "cmake.automaticReconfigure": false,
-    "cmake.configureSettings": {
-        
-    },
-    "cmake.allowUnsupportedPresetsVersions": true,
-    "cmake.options.statusBarVisibility": "visible"
-}
-```
 
 NOTE: there was one instance that the Kylin addon was not working correctly with CMake. In this circumstances, just configure and build directly from an OS termninal
 
