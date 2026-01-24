@@ -5,6 +5,8 @@
 - Use UEFI when creating the USB
 - Install Windows first in Drive1
 - Install Linux second in Drive2
+- Systemd and Dracut are the default in EndeavourOS
+- Latest kernel headers (if you run the mainline kernel)
 
 Partition Table
 
@@ -13,9 +15,9 @@ Partition Table
 | **Disk 1** | Windows 11 | ESP       | 200 MB–1 GB    | FAT32      | —           | WINESP     | No         | boot, esp |
 |      |               | MSR       | 16 MB          | —          | —           | —          | No         | msftres |
 |      |               | C:        | Rest of disk   | NTFS       | —           | WINOS      | Optional (BitLocker) | msftdata |
-| **Disk 2** | Arch Linux | ESP       | 2 GB - 6 GB | FAT32      | `/boot` or `/efi` | ARCHESP    | No         | boot |
-|      |               | Root `/`  | 30–60 GB       | ext4       | `/`         | ARCHROOT   | Optional (LUKS) | — |
-|      |               | Swap      | 2–32 GB (optional) | swap    | —           | ARCHSWAP   | Optional (LUKS) | swap |
+| **Disk 2** | Arch Linux | ESP       | 3.1 GB - 6 GB | FAT32      | `/boot` or `/efi` | ARCHESP    | No         | boot |
+|      |               | Root `/`  | 30–85 GB       | ext4       | `/`         | ARCHROOT   | Optional (LUKS) | — |
+|      |               | Swap (optional) | 2–32 GB | swap    | —           | ARCHSWAP   | Optional (LUKS) | swap |
 |      |               | Var `/var` (optional) | 4–20 GB | ext4 | `/var` | ARCHVAR    | Optional (LUKS) | — |
 |      |               | Home `/home` | Remaining space | ext4    | `/home`     | ARCHHOME   | Optional (LUKS) | — | 
 
@@ -24,55 +26,68 @@ Partition Table
 ---
 ---
 
-### GPU NVidia
+### GPU NVidia (aka DarthVader)
 
-- LTS kernel headers (if you run linux-lts)
-
-sudo pacman -S linux-lts-headers 
-
-- Latest kernel headers (if you run the mainline kernel)
-
-sudo pacman -S linux-headers
-
-NOTE: you need to check which one to use now, try it [here](https://wiki.archlinux.org/title/NVIDIA) or [here for endeavour OS](https://forum.endeavouros.com/t/nvidia-gpu-users-attention-please-dec-2025/77119).
+NOTE: you need to check which GPU-Driver to use now, try to find out [here](https://wiki.archlinux.org/title/NVIDIA) or [here for endeavour OS](https://forum.endeavouros.com/t/nvidia-gpu-users-attention-please-dec-2025/77119).
 
 - In my case, I tested in a 1060 GTX 6GB (Recommended for GTX 1060 (Pascal))
 
-yay -S lib32-nvidia-580xx-utils nvidia-580xx-utils nvidia-580xx-dkms nvidia-580xx-settings
+### 1. Requirements
 
-- For modern GPUs supported by the official driver
+```
+sudo pacman -Syu --needed base-devel dkms git linux-headers
+yay -S lib32-nvidia-580-utils nvidia-580xx-utils nvidia-580xx-dkms nvidia-580xx-settings
+```
 
-sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils
+### 2. now, and future kernel updates, you need to repeat this --block--
+```
+sudo dkms autoinstall
+dkms status
+uname -r
+sudo dracut --force --kver $(uname -r)
+sudo reinstall-kernels
+```
 
-- Post-install (automatically rebuilds the kernel module (NVIDIA driver) whenever a new kernel is installed
+### 3. update boot, or reinstall (when corrupted).
+```
+sudo bootctl update
+// sudo bootctl --esp-path=/efi install || true
+```
 
-sudo dkms autoinstall 
-
-sudo mkinitcpio -P
-
-sudo reboot
-
-- Optional (cuda tools and integrated GPUs)
-
-sudo pacman -S nvidia-prime
-
+### now reboot, and check if it is working
+```
+# reboot
+lsmod | grep nvidia
 nvidia-smi
+```
 
-sudo pacman -S cuda
+### Ignore the other drivers, to prevent brick
+```
+echo -e "blacklist nouveau\noptions nouveau modeset=0" | sudo tee /etc/modprobe.d/blacklist-nouveau.conf
+sudo dracut --force --kver $(uname -r)
+```
+
+### copy/backup pacman.conf, and ignore the DarthVader, I mean, the nvidia packages in the IgnorePkg
+```
+sudo cp /etc/pacman.conf /etc/pacman.conf.bak
+sudo nano /etc/pacman.conf
+```
+
+```
+IgnorePkg = nvidia nvidia-dkms nvidia-utils nvidia-open nvidia-open-dkms nvidia-lts
+```
 
 ---
 
-- Vulkan Support, tools and OpenGL (if needed, but good to know they are there)
+- Vulkan Support, tools and OpenGL (Required)
 
+```
+sudo pacman -S vulkan-tools vulkan-icd-loader lib32-vulkan-icd-loader
 glxinfo | grep "OpenGL renderer"
-  
 vulkaninfo | grep deviceName
-
 vulkaninfo
-
 vkcube
-
-sudo pacman -S vulkan-tools vulkan-icd-loader
+```
 
 ---
 ---
