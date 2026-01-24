@@ -13,7 +13,14 @@
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/build/linux/bin/profile/Editor",
-            "cwd":"${fileDirname}"
+            "cwd":"${fileDirname}",
+            
+            /// This is a fix for Arch-Linux. Use only if the Editor-UI has strange dimensions
+            "env": {
+                "QT_AUTO_SCREEN_SCALE_FACTOR": "0",
+                "QT_ENABLE_HIGHDPI_SCALING": "1",
+                "QT_FONT_DPI": "96"
+            }
         }
     ]
 }
