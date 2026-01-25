@@ -36,7 +36,7 @@ NOTE: you need to check which GPU-Driver to use now, try to find out [here](http
 
 ```
 sudo pacman -Syu --needed base-devel dkms git linux-headers
-yay -S lib32-nvidia-580-utils nvidia-580xx-utils nvidia-580xx-dkms nvidia-580xx-settings
+yay -S lib32-nvidia-580xx-utils nvidia-580xx-utils nvidia-580xx-dkms nvidia-580xx-settings
 ```
 
 ### 2. now, and future kernel updates, you need to repeat this --block--
