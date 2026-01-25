@@ -22,7 +22,7 @@
             "cacheVariables": {
                 "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF",
-                "CMAKE_UNITY_BUILD": "ON",
+                "CMAKE_UNITY_BUILD": "OFF", // You can turn this ON after the first build, or keep it OFF
                 "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE"
             }
         }
@@ -33,18 +33,18 @@
             "displayName": "Build Editor Profile (Custom)",
             "description": "Build Editor target with profile config",
             "configurePreset": "custom-linux-clang-ninja",
-            "targets": ["Editor", "Project092.GameLauncher"],
+            "targets": ["Editor", "NameOfYourProject.GameLauncher"],
             "configuration": "profile",
-            "jobs": 1
+            "jobs": 8 // adjust to your cores or remove
         },
         {
             "name": "build-editor-and-AzTestRunner-profile",
             "displayName": "Build Editor Profile and AzTestRunner (Custom)",
             "description": "Build Editor target with profile config",
             "configurePreset": "custom-linux-clang-ninja",
-            "targets": ["Editor", "Project092.GameLauncher", "AzTestRunner", "AtomCore.Tests"],
+            "targets": ["Editor", "NameOfYourProject.GameLauncher", "AzTestRunner", "AtomCore.Tests"],
             "configuration": "profile",
-            "jobs": 4
+            "jobs": 8 // adjust to your cores or remove
         }
     ]
 }
