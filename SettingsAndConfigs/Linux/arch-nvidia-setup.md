@@ -1,4 +1,4 @@
-### Dual OS suggestions: E.g. Dual‑Disk Partition Layout (Windows + Arch Linux with systemd‑boot)
+### Dual OS suggestions: E.g. Dual‑Disk Partition Layout Windows + Arch Linux (EndeavourOS)
 
 - Consider a layout that separates Windows and Arch Linux onto different disks, each with its own EFI System Partition (ESP).
 - Consider Ventoy USB-pen, since it allows multiple OS to boot from the same pen.
@@ -48,26 +48,26 @@ sudo dracut --force --kver $(uname -r)
 sudo reinstall-kernels
 ```
 
-### 3. update boot, or reinstall (when corrupted).
+### 3.1 update boot, or reinstall (when corrupted).
 ```
 sudo bootctl update
-// sudo bootctl --esp-path=/efi install || true
+# sudo bootctl --esp-path=/efi install || true
 ```
 
-### now reboot, and check if it is working
+### 3.2 now reboot, and check if it is working
 ```
-# reboot
+reboot
 lsmod | grep nvidia
 nvidia-smi
 ```
 
-### Ignore the other drivers, to prevent brick
+### 4.1 Ignore the other drivers, to prevent brick
 ```
 echo -e "blacklist nouveau\noptions nouveau modeset=0" | sudo tee /etc/modprobe.d/blacklist-nouveau.conf
 sudo dracut --force --kver $(uname -r)
 ```
 
-### copy/backup pacman.conf, and ignore the DarthVader, I mean, the nvidia packages in the IgnorePkg
+### 4.2 copy/backup pacman.conf, and ignore the DarthVader, I mean, the nvidia packages in the IgnorePkg
 ```
 sudo cp /etc/pacman.conf /etc/pacman.conf.bak
 sudo nano /etc/pacman.conf
@@ -79,10 +79,10 @@ IgnorePkg = nvidia nvidia-dkms nvidia-utils nvidia-open nvidia-open-dkms nvidia-
 
 ---
 
-- Vulkan Support, tools and OpenGL (Required)
+### 5. Vulkan Support, tools and OpenGL (Required)
 
 ```
-sudo pacman -S vulkan-tools vulkan-icd-loader lib32-vulkan-icd-loader
+sudo pacman -S vulkan-headers vulkan-tools vulkan-icd-loader lib32-vulkan-icd-loader mesa
 glxinfo | grep "OpenGL renderer"
 vulkaninfo | grep deviceName
 vulkaninfo
@@ -93,7 +93,7 @@ vkcube
 ---
 ---
 
-### ZRam set up
+### 6. ZRam set up (Optional)
 
 ```
 sudo pacman -S zram-generator
@@ -129,12 +129,16 @@ swapon --show
 - Blender
 ```
 sudo pacman -S blender
-prime-run blender
+#-- if you are running from a PC with 2 GPUs:
+# prime-run blender 
 ```
 
 ---
 
 - VSCodium
+```
+yay -S vscodium
+```
 
 CMake from twxs
 
@@ -158,36 +162,33 @@ NOTE: there was one instance that the Kylin addon was not working correctly with
 
 - (O3DE) Open 3D Engine from source, github
 
-yay -S o3de-bin (this fails or skips all files on arch. Left it here to aknowledge its existence...)
+Many required libs are already listed above. Additional build requirements
+```
+sudo pacman -S cmake git-lfs python python-pip gcc clang clang-tools-extra ninja llvm lld libc++ perf valgrind cppcheck rapidjson sdl2 ccache
+```
 
-sudo pacman -S curl unzip zip tar pkgconf
-
-sudo pacman -S base-devel git (optional. the one bellow should cover this. Left it here for Ubuntu users)
-
-sudo pacman -S git cmake python python-pip gcc clang clang-tools-extra ninja git-lfs llvm lld libc++ perf valgrind cppcheck rapidjson sdl2 ccache
-
+Libs O3DE needs as dependencies
+```
 sudo pacman -S libxcb libx11 libxrandr libxinerama libxcursor libxi
-
-sudo pacman -S mesa glu
-
 sudo pacman -S alsa-lib openssl
+sudo pacman -S qt5-base qt5-tools qt5-declarative qt5-svg qt5-wayland
+```
 
-sudo pacman -S qt5-base qt5-tools qt5-declarative qt5-svg qt5-wayland (O3DE is currently using this)
-sudo pacman -S qt6-base qt6-tools qt6-declarative qt6-svg qt6-wayland (optional. Eager, in case they change tooling)
-
+Advised, for documentation of the project
+```
 sudo pacman -S doxygen graphviz
+```
 
-sudo pacman -S gtk3 gtk4 glade
+Optional this is just a collection of libs, algorithms... in case you need it
+```
+sudo pacman -S boost 
+```
 
-sudo pacman -S vulkan-icd-loader vulkan-tools vulkan-headers
-
-sudo pacman -S extra/qt5-tools extra/vulkan-headers
-
-sudo pacman -S boost (Optional this is just a collection of libs, algorithms... in case you need it.)
-
-sudo pacman -Syu (advised, so the system is updated)
-
+Advised, so the system is updated
+```
+sudo pacman -Syu
 reboot
+```
 
 (0) (O3DE -> Engines -> development) fork; clone the engine source code
 
@@ -279,50 +280,55 @@ Terminal=false
 ### outros
 
 - Calculator
-
+```
 sudo pacman -S qalculate-gtk
-
----
+```
 
 - social media videos/audio
-
+```
 sudo pacman -S jq
 
 git clone https://github.com/Ld-Hagen/fix-opera-linux-ffmpeg-widevine.git
 cd fix-opera-linux-ffmpeg-widevine
 
 ./install.sh
-
----
+```
 
 - Print-Screen with rectangle selection
 
+```
 sudo pacman -S flameshot
-
---- 
+```
 
 - Steam (for playing, fun or testing your demos. Assuming you already have most drivers and vulkan)
 
 Follow the official suggestions available here: [archlinux.org Steam](https://wiki.archlinux.org/title/Steam). Summary:
 
+```
 sudo pacman -Syu
 
 sudo nano /etc/pacman.conf (and make sure the following is uncommented)
+```
 
 ```
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 ```
 
+```
 sudo pacman -Syu
 
-sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils
+#-- you already have this:
+# sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils
+# yay -S lib32-nvidia-580-utils nvidia-580xx-utils nvidia-580xx-dkms nvidia-580xx-settings
 
-sudo pacman -S vulkan-icd-loader lib32-vulkan-icd-loader
+#-- You already have this:
+#sudo pacman -S vulkan-icd-loader lib32-vulkan-icd-loader
 
 sudo reboot
 
 sudo pacman -S steam
+```
 
 ---
 
@@ -330,10 +336,11 @@ sudo pacman -S steam
 
 - if the updates stop working, use the package cleanup configuration and remove the cache then:
 
+```
 sudo -Sy
 sudo -Syy
-
-Then restart
+# sudo reboot
+```
 
 ---
 
