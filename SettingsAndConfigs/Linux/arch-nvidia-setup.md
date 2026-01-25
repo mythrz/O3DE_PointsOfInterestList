@@ -269,9 +269,9 @@ scripts/o3de.sh register --this-engine
 scripts/o3de.sh create-project --project-path $HOME/O3DE/Projects/NameOfYourProject
 ```
 
-Open your VSCodium/Code, open the new project folder, copy the cmakeUserPresets, config and build.
+Open your VSCodium/Code, open the new project folder, copy the cmakeUserPresets, config and build (similar to what you did for the engine)
 
-If you want to do it in the command line, do this instead, else skip to F.
+If you want to do it in the command line, do this instead, otherwise skip to F.
 
 ```
 cmake -G "Ninja Multi-Config" \
@@ -295,7 +295,7 @@ Create a new shortcut and make sure to set some env variables on the Exec
 Name=O3DE Dev Editor
 GenericName=
 Comment=
-Exec=env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_ENABLE_HIGHDPI_SCALING=1 QT_FONT_DPI=96 /home/yourUserName/O3DE/Projects/SystemPrototypes/build/linux/bin/profile/Editor
+Exec=env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_ENABLE_HIGHDPI_SCALING=1 QT_FONT_DPI=96 /home/yourUserName/O3DE/Projects/NameOfYourProject/build/linux/bin/profile/Editor
 Type=Application
 Icon=application-x-desktop
 Terminal=false
