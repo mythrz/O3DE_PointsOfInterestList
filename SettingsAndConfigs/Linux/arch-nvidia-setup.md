@@ -135,7 +135,7 @@ sudo pacman -S blender
 
 ---
 
-- VSCodium
+- VSCodium (Install O3DE requirements first)
 ```
 yay -S vscodium
 ```
@@ -148,11 +148,13 @@ Cmake Tools (Fork) from KylinldeTeam
 
 CodeLLDB from Vadimcn
 
-Kylin CLangd  from KylinldeTeam
+Kylin Clangd  from KylinldeTeam
 
 Structured Text Language Support from Serhioromano
 
 YAML from Red Hat
+
+Lua Debugger For O3DE from Galib Arrieta (VSCode only)
 
 NOTE: there was one instance that the Kylin addon was not working correctly with CMake. In this circumstances, just configure and build directly from an OS termninal
 
@@ -162,16 +164,19 @@ NOTE: there was one instance that the Kylin addon was not working correctly with
 
 - (O3DE) Open 3D Engine from source, github
 
+### A. Required libs
+
 Many required libs are already listed above. Additional build requirements
 ```
 sudo pacman -S cmake git-lfs python python-pip gcc clang clang-tools-extra ninja llvm lld libc++ perf valgrind cppcheck rapidjson sdl2 ccache
 ```
 
-Libs O3DE needs as dependencies
+Libs O3DE needs as dependencies (you should already have most if not all of these)
 ```
-sudo pacman -S libxcb libx11 libxrandr libxinerama libxcursor libxi
-sudo pacman -S alsa-lib openssl
-sudo pacman -S qt5-base qt5-tools qt5-declarative qt5-svg qt5-wayland
+# sudo pacman -S libxcb libx11 libxrandr libxinerama libxcursor libxi
+# sudo pacman -S alsa-lib openssl
+# sudo pacman -S qt5-base qt5-tools qt5-declarative qt5-svg qt5-wayland
+sudo pacman -S qt5-tools
 ```
 
 Advised, for documentation of the project
@@ -190,23 +195,34 @@ sudo pacman -Syu
 reboot
 ```
 
-(0) (O3DE -> Engines -> development) fork; clone the engine source code
+### B. Cloning, cmake and build
 
-(1) git lfs install
+- After rebooting, you can get the source files and build the engine inside the following folders
 
-(2) git lfs fetch --all 
+(Home -> O3DE -> Engines -> development) fork and clone the engine source code
 
-(3) git lfs pull (you have to force it through the cmd, cause some IDEs do not do it by default); 
+Open VSCodium/Code or a terminal and navigate to your cloned foldere "o3de"
 
-(4) python/get_python.sh
+You then MUST use git-lfs and get all other files (REQUIRED), as well as python (REQUIRED)
+```
+git lfs install
+git lfs fetch --all 
+git lfs pull
 
-(5) create a copy of the existing CMakePresets.json file so the file is in the same root; rename it to CMakeUserPresets.json and copy past the content.
+python/get_python.sh
+```
 
-Check if "cmake.useCMakePresets" is set to "always" or "auto". CTRL+SHIFT+P -> Cmake: Select Configure Preset, and the presets should be there. IF NOT, reboot your PC, delete the CmakeUserPresets.json and try again (It does not always work at first try)
+create a copy of the existing CMakePresets.json file so the file is in the same root; rename it to CMakeUserPresets.json and copy past the content.
+
+Check if "cmake.useCMakePresets" is set to "always" or "auto". CTRL+SHIFT+P -> Cmake: Select Configure Preset, and the presets should be there, choose Linux Clang Ninja (Custom). IF NOT, reboot your PC, delete the CmakeUserPresets.json and try again (It does not always work at first try).
 
 If the IDE addons to configure and build are not working due to updates, delete the build/linux folder and do it manually (cmake updates or addon updates rarely break, but when they do they do not tell why... they just report a CMake crash with segfault).
 
-- Config
+After the configure (Linux Clang Ninja (Custom)), you can build (Build Editor Profile (Custom))
+
+
+
+### C. If you are using a terminal instead of an IDE to config and build try this, else skip to point D.
 
 ```
 cmake --preset custom-linux-clang-ninja
@@ -239,13 +255,23 @@ cmake \
   --verbose
 ```
 
-(7) scripts/o3de.sh register --this-engine
+### D. Register the engine
+
+```
+scripts/o3de.sh register --this-engine
+```
 
 ---
 
-- (O3DE) Creating the project
+### E. (O3DE) Creating a new project
 
+```
 scripts/o3de.sh create-project --project-path $HOME/O3DE/Projects/NameOfYourProject
+```
+
+Open your VSCodium/Code, open the new project folder, copy the cmakeUserPresets, config and build.
+
+If you want to do it in the command line, do this instead, else skip to F.
 
 ```
 cmake -G "Ninja Multi-Config" \
@@ -260,7 +286,7 @@ cmake -G "Ninja Multi-Config" \
 cmake --build build/linux --config profile --target Editor NameOfYourProject.GameLauncher
 ```
 
-- How to run it (Arch sometimes present strange UI dimensions)
+### F. How to run it (Arch sometimes present strange UI dimensions)
 
 Create a new shortcut and make sure to set some env variables on the Exec
 
