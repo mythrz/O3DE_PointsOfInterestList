@@ -263,7 +263,7 @@ scripts/o3de.sh register --this-engine
 
 ---
 
-### E. (O3DE) Creating a new project
+### E.1 (O3DE) Creating a new project
 
 ```
 scripts/o3de.sh create-project --project-path $HOME/O3DE/Projects/NameOfYourProject
@@ -284,6 +284,21 @@ cmake -G "Ninja Multi-Config" \
 
 ```
 cmake --build build/linux --config profile --target Editor NameOfYourProject.GameLauncher
+```
+
+### E.2 (O3DE) Debugging
+
+- Open VSCodium/Code and open the project folder.
+- Create a workspace and save the workspace
+- Add your custom gems folder to that workspace
+- Add your custom gems to your project dependencies with the O3DE menu (avoid building through the menu)
+- Create a new folder under your project-folder, called ".vscode", under it, create your launch.json
+- Configure with CMake so it generates your compile_commands.json file (either configure VSCodium settings to point to that folder, or just copy-past that file to the root of the project)
+
+This should be the setting that copies the compile_commands.json... But it is not working? Copying it manually worked, and started the index
+
+```
+"cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json"
 ```
 
 ### F. How to run it (Arch sometimes present strange UI dimensions)
