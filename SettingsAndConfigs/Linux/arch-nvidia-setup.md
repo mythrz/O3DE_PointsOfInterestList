@@ -356,6 +356,16 @@ sudo reboot
 sudo pacman -S steam
 ```
 
+- LaTeX (full to avoid missing of packages)
+
+```
+sudo pacman -S texlive-meta
+```
+
+LaTeX Workshop by Jame-Yu
+
+open the TeX tab, build. In the output tab, choose LaTeX compiler to see the outcome of the build
+
 ---
 
 ### Troubleshooting
