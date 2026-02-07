@@ -7,6 +7,7 @@
 - Install Linux second in Drive2
 - Systemd and Dracut are the default in EndeavourOS
 - Latest kernel headers (if you run the mainline kernel)
+- WARNING: Dual OS often end up with Windows canabalizing other OS boot-system. If possible, work with EOS only
 
 Partition Table
 
