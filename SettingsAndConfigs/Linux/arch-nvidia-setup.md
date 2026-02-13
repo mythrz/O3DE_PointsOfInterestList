@@ -16,7 +16,7 @@ Partition Table
 | **Disk 1** | Windows 11 | ESP       | 200 MB–1 GB    | FAT32      | —           | WINESP     | No         | boot, esp |
 |      |               | MSR       | 16 MB          | —          | —           | —          | No         | msftres |
 |      |               | C:        | Rest of disk   | NTFS       | —           | WINOS      | Optional (BitLocker) | msftdata |
-| **Disk 2** | Arch Linux | ESP       | 3.1 GB - 6 GB | FAT32      | `/boot` or `/efi` | ARCHESP    | No         | boot |
+| **Disk 2** | Arch Linux | ESP       | 3.1 GB - 6 GB | FAT32      | `/boot` or `/efi` (advised) | ARCHESP    | No         | boot |
 |      |               | Root `/`  | 30–85 GB       | ext4       | `/`         | ARCHROOT   | Optional (LUKS) | — |
 |      |               | LinuxSwap or Swap (optional) | 2–32 GB | swap    | —           | ARCHSWAP   | Optional (LUKS) | swap |
 |      |               | Var `/var` (optional) | 4–20 GB | ext4 | `/var` | ARCHVAR    | Optional (LUKS) | — |
