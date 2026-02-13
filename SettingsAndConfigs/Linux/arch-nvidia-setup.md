@@ -18,7 +18,7 @@ Partition Table
 |      |               | C:        | Rest of disk   | NTFS       | —           | WINOS      | Optional (BitLocker) | msftdata |
 | **Disk 2** | Arch Linux | ESP       | 3.1 GB - 6 GB | FAT32      | `/boot` or `/efi` | ARCHESP    | No         | boot |
 |      |               | Root `/`  | 30–85 GB       | ext4       | `/`         | ARCHROOT   | Optional (LUKS) | — |
-|      |               | Swap (optional) | 2–32 GB | swap    | —           | ARCHSWAP   | Optional (LUKS) | swap |
+|      |               | LinuxSwap or Swap (optional) | 2–32 GB | swap    | —           | ARCHSWAP   | Optional (LUKS) | swap |
 |      |               | Var `/var` (optional) | 4–20 GB | ext4 | `/var` | ARCHVAR    | Optional (LUKS) | — |
 |      |               | Home `/home` | Remaining space | ext4    | `/home`     | ARCHHOME   | Optional (LUKS) | — | 
 
