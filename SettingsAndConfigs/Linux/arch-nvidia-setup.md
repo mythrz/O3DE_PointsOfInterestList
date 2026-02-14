@@ -31,16 +31,55 @@ Partition Table
 
 NOTE: you need to check which GPU-Driver to use now, try to find out [here](https://wiki.archlinux.org/title/NVIDIA) or [here for endeavour OS](https://forum.endeavouros.com/t/nvidia-gpu-users-attention-please-dec-2025/77119).
 
-- In my case, I tested in a 1060 GTX 6GB (Recommended for GTX 1060 (Pascal))
+- Tested with in two different machines with NVIDIA cards. Desktop 1060 GTX 6GB (Recommended for GTX 1060 (Pascal); and a laptop with GP108M GeForce MX150.
 
 ### 1. Requirements
 
+For Desktop:
 ```
 sudo pacman -Syu --needed base-devel dkms git linux-headers
 yay -S lib32-nvidia-580xx-utils nvidia-580xx-utils nvidia-580xx-dkms nvidia-580xx-settings
 ```
+For Laptop you need to include this one, so you can choose which GPU to use:
+```
+yay -S nvidia-prime # DO NOT DO THIS IN DESKTOP
+```
 
-### 2. now, and future kernel updates, you need to repeat this --block--
+Tested two options to mitigate bricks. Option A (automated with no manual hacking) and Option B (manual auto install dkms and force ignore other drivers)
+
+
+### Option A (advised)
+
+### A.2. EOS comes with dracut by default to manage boot images.
+
+```
+sudo reinstall-kernels # or sudo dracut-rebuild
+```
+
+### A.3 DRM Modesetting Enabled sometimes helps Vulkan apps perform better (this is optional, you can try it later)
+
+```
+sudo nano /etc/kernel/cmdline # nvidia-drm.modeset=1 
+```
+Add nvidia-drm.modeset=1 to the end of the line. Then Save, reinstall again.
+
+```
+sudo reinstall-kernels
+reboot
+```
+
+Check if the drivers are working correctly
+```
+lsmod | grep nvidia
+nvidia-smi
+glxinfo | grep "OpenGL renderer"
+```
+
+---
+
+### Option B (worth exploring if A does not work)
+
+### B:2. now, and future kernel updates, you need to repeat this --block--
 ```
 sudo dkms autoinstall
 dkms status
@@ -49,26 +88,26 @@ sudo dracut --force --kver $(uname -r)
 sudo reinstall-kernels
 ```
 
-### 3.1 update boot, or reinstall (when corrupted).
+### B:3.1 update boot, or reinstall (when corrupted)
 ```
 sudo bootctl update
 # sudo bootctl --esp-path=/efi install || true
 ```
 
-### 3.2 now reboot, and check if it is working
+### B:3.2 now reboot, and check if it is working
 ```
 reboot
 lsmod | grep nvidia
 nvidia-smi
 ```
 
-### 4.1 Ignore the other drivers, to prevent brick
+### B:4.1 Ignore the other drivers, to prevent brick
 ```
 echo -e "blacklist nouveau\noptions nouveau modeset=0" | sudo tee /etc/modprobe.d/blacklist-nouveau.conf
 sudo dracut --force --kver $(uname -r)
 ```
 
-### 4.2 copy/backup pacman.conf, and ignore the DarthVader, I mean, the nvidia packages in the IgnorePkg
+### B:4.2 copy/backup pacman.conf, and ignore the DarthVader, I mean, the nvidia packages in the IgnorePkg
 ```
 sudo cp /etc/pacman.conf /etc/pacman.conf.bak
 sudo nano /etc/pacman.conf
@@ -84,10 +123,22 @@ IgnorePkg = nvidia nvidia-dkms nvidia-utils nvidia-open nvidia-open-dkms nvidia-
 
 ```
 sudo pacman -S vulkan-headers vulkan-tools vulkan-icd-loader lib32-vulkan-icd-loader mesa
+```
+
+If you are using an intel processor with integrated graphics, install these two (e.g., Intel UHD 620 can handle low-power Vulkan tasks)
+```
+sudo pacman -S --needed vulkan-intel lib32-vulkan-intel
+```
+
+Check if it is working
+
+```
 glxinfo | grep "OpenGL renderer"
 vulkaninfo | grep deviceName
 vulkaninfo
 vkcube
+# prime-run vkcube # To test the dedicated GPU on laptops
+# prime-run glxinfo | grep "OpenGL renderer"
 ```
 
 ---
