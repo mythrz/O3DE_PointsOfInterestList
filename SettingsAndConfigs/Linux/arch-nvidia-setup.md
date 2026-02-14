@@ -355,7 +355,11 @@ This should be the setting that copies the compile_commands.json... But it is no
 
 ### F. How to run it (Arch sometimes present strange UI dimensions)
 
-Create a new shortcut and make sure to set some env variables on the Exec
+Create a new shortcut. 
+
+If you are having troubles with the UI consider setting some env variables on the Exec=env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_ENABLE_HIGHDPI_SCALING=1 QT_FONT_DPI=96 ...
+
+or set [nvidia-drm.modeset=1](https://github.com/mythrz/O3DE_PointsOfInterestList/blob/main/SettingsAndConfigs/Linux/arch-nvidia-setup.md#a3-drm-modesetting-enabled-sometimes-helps-vulkan-apps-perform-better-this-is-optional-you-can-try-it-later) as mentioned above on A3, and you no longer require the "env" variables.
 
 ```
 [Desktop Entry]
