@@ -5,7 +5,7 @@
             "name": "O3DE Game",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/linux/bin/profile/Project092.GameLauncher",
+            "program": "${workspaceFolder}/build/linux/bin/profile/NameOfYourProject.GameLauncher",
             "cwd":"${fileDirname}"
         },
         {
@@ -21,6 +21,17 @@
                 "QT_ENABLE_HIGHDPI_SCALING": "1",
                 "QT_FONT_DPI": "96"
             }
+        },
+        {
+            "name": "NameOfYourGem Tests",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/linux/bin/profile/AzTestRunner",
+            "args": [
+                "${workspaceFolder}/build/linux/bin/profile/NameOfYourGem.Tests.so",
+                "AzRunUnitTests"
+            ],
+            "console": "integratedTerminal",
         }
     ]
 }
