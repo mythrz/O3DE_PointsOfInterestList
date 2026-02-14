@@ -154,7 +154,7 @@ sudo nano /etc/systemd/zram-generator.conf
 
 ```
 [zram0]
-zram-size = ram/2
+zram-size = ram * 0.6 #zram-size = ram/2 # 50% or 60%
 compression-algorithm = zstd
 swap-priority = 100
 ```
@@ -162,14 +162,14 @@ swap-priority = 100
 ZRam start up (it will always be on through different sessions)
 
 ```
-sudo systemctl daemon-reexec
-sudo systemctl restart systemd-zram-setup@zram0.service
-swapon --show
+sudo systemctl daemon-reexec # sudo systemctl daemon-reload
+sudo systemctl restart systemd-zram-setup@zram0.service # sudo systemctl start /dev/zram0
+zramctl #swapon --show 
 ```
 - You can also turn ZRam off for a sessions:
 ```
 sudo swapoff /dev/zram0
-swapon --show
+zramctl #swapon --show
 ```
 
 ---
