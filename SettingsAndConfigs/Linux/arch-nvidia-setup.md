@@ -243,7 +243,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 ```
     
-Terminate all running agents or reboot after you enable the common agent (I advise you to do both, just to be safe)
+Terminate all running agents, just to be safe (the reboot at the end is technically enough)
 ```
 killall ssh-agent
 ```
@@ -253,12 +253,12 @@ Let systemd manage your one and only one SSH agent
 systemctl --user enable --now ssh-agent
 ```
     
-Open a terminal, navigate to the repository folder, if you already have the repository (You need to do this every session)
+You can manually add your key, every session;
 ```
 ssh-add ~/.ssh/id_rsa_sha512
 ```
 
-Or, instead of ssh-add manually, create a ~/.ssh/config (this will automatically add the key, so the step above is not required every session)
+Or, instead of ssh-add manually, create a ~/.ssh/config. This will automatically add the key, so the step above is not required (do one time, and forget).
 
 ```
 Host *
