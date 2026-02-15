@@ -216,7 +216,7 @@ It often asks for a user + password. Note that this is your generated token user
 
 - Source Control with git: SSH (advanced, more secure)
 
-VSCodium/Code integrated terminal often uses a different SSH-agent from the OS terminal. 
+VSCodium/Code integrated terminal often uses a different SSH-agent from the OS terminal. But it is possible to set only one SSH-agent across the terminals.
 
 Create Key (make sure you create it according to your provider. E.g., [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) [GitLab](https://docs.gitlab.com/user/ssh/), [IBM](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-git_local), [Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops), [Atlassian](https://www.atlassian.com/git/tutorials/git-ssh), [AWS](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-ssh-unixes.html), [SourceForge](https://sourceforge.net/p/forge/documentation/SSH%20Keys/))
 
