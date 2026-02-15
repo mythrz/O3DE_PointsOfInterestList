@@ -176,21 +176,15 @@ zramctl #swapon --show
 ---
 ---
 
-### Usual Apps
+### IDE
 
-- Blender
-```
-sudo pacman -S blender
-#-- if you are running from a PC with 2 GPUs:
-# prime-run blender 
-```
+- VSCodium (You can install O3DE A. Required libs 1st)
 
----
-
-- VSCodium (Install O3DE requirements first)
 ```
 yay -S vscodium
 ```
+
+*Extensions:*
 
 CMake from twxs
 
@@ -209,6 +203,85 @@ YAML from Red Hat
 Lua Debugger For O3DE from Galib Arrieta (VSCode only)
 
 NOTE: there was one instance that the Kylin addon was not working correctly with CMake. In this circumstances, just configure and build directly from an OS termninal
+
+---
+
+- Source Control with git: https (recommended)
+
+https is the quickiest and easy way to move on. Go to your provider, generate a new token and clone your repository.
+
+It often asks for a user + password. Note that this is your generated token user + password (NOT your provider credentials)
+
+---
+
+- Source Control with git: SSH (advanced, more secure)
+
+VSCodium/Code integrated terminal often uses a different SSH-agent from the OS terminal. 
+
+Create Key (make sure you create it according to your provider. E.g., [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) [GitLab](https://docs.gitlab.com/user/ssh/), [IBM](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-git_local), [Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops), [Atlassian](https://www.atlassian.com/git/tutorials/git-ssh), [AWS](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-ssh-unixes.html), [SourceForge](https://sourceforge.net/p/forge/documentation/SSH%20Keys/))
+
+```
+# This is just an example... Make sure you match the needs of your provider. Also, id_rsa or id_ed25519 are usually the default names when generated automatically
+ssh-keygen -t rsa -b 4096 -C "email@mail.com userName rng msg" -f ~/.ssh/id_rsa_sha512 -o -a 100
+``` 
+Display Key to see if it is correct (optional)
+```
+ssh-keygen -lf ~/.ssh/id_rsa_sha512.pub -E sha512
+```
+    
+Open .ssh/id_rsa_sha512.pub and Copy to your cloud service (e.g., GitHub, GitLab, IBM, Azure, Atlassian, SourceForge, etc...)
+    
+Edit the .bash_profile file at your home folder (it is a hidden file)
+```
+#
+# ~/.bash_profile
+#
+
+# Standard path for the SSH socket. OS Terminal agent = VSCode Terminal agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+```
+    
+Terminate all running agents or reboot after you enable the common agent (I advise you to do both, just to be safe)
+```
+killall ssh-agent
+```
+    
+Let systemd manage your one and only one SSH agent
+```
+systemctl --user enable --now ssh-agent
+```
+    
+Open a terminal, navigate to the repository folder, if you already have the repository (You need to do this every session)
+```
+ssh-add ~/.ssh/id_rsa_sha512
+```
+
+Or, instead of ssh-add manually, create a ~/.ssh/config (this will automatically add the key, so the step above is not required every session)
+
+```
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_rsa_sha512
+```
+ 
+If you are changing your existing repo/project to SSH, change the origin
+```
+git remote set-url origin git@ssh.org.com:/<project>/<repo>
+git remote -v
+```
+    
+reboot just to make sure everything is initiating correctly, then test if it is working or make a small commit
+```
+echo $SSH_AUTH_SOCK # the result should be the same in a OS terminal and VSCodium/Code terminal
+ssh-add -l # check if the agent actually has your key loaded
+```
+
+From this point forward, never run this! Because it creates another SSH agent, and the objective is to have only one agent across your terminals
+```
+# eval "$(ssh-agent -s)" # DON'T
+```
 
 ---
 ---
@@ -376,10 +449,21 @@ Terminal=false
 
 ### outros
 
+- Blender
+```
+sudo pacman -S blender
+#-- if you are running from a PC with 2 GPUs:
+# prime-run blender 
+```
+
+---
+
 - Calculator
 ```
 sudo pacman -S qalculate-gtk
 ```
+
+---
 
 - social media videos/audio
 ```
@@ -391,11 +475,15 @@ cd fix-opera-linux-ffmpeg-widevine
 ./install.sh
 ```
 
+---
+
 - Print-Screen with rectangle selection
 
 ```
 sudo pacman -S flameshot
 ```
+
+---
 
 - Steam (for playing, fun or testing your demos. Assuming you already have most drivers and vulkan)
 
@@ -426,6 +514,8 @@ sudo reboot
 
 sudo pacman -S steam
 ```
+
+---
 
 - LaTeX (full to avoid missing of packages)
 
