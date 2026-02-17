@@ -558,6 +558,52 @@ connect XX:XX:XX:XX:XX:XX
 ```
 ---
 
+- Fire Wall
+
+```
+# install
+sudo pacman -S ufw
+
+#
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+# Allow specific port (when you need it)
+sudo ufw allow 8080
+
+# Allow Secure Shell (SSH when you need it)
+sudo ufw allow ssh
+
+# start firewall
+sudo systemctl enable --now ufw # on boot
+sudo ufw enable # enable manually
+sudo ufw status verbose # show current status
+
+
+```
+
+- Anti virus
+```
+# install
+sudo pacman -S clamav 
+
+# Stop, update database, restart
+sudo systemctl stop clamav-freshclam
+sudo freshclam
+sudo systemctl start clamav-freshclam
+
+# scan a folder
+clamscan -r -i ~/Downloads
+
+# quarentine
+clamscan -r --move=~/quarentine ~/Downloads/Folder1
+
+# instant remove
+clamscan -r --remove ~/Downloads/Folder1
+```
+
+---
+
 ### Troubleshooting
 
 - if the updates stop working, use the package cleanup configuration and remove the cache then:
