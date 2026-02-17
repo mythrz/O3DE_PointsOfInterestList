@@ -476,7 +476,7 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 
 ---
 
-### Other Interesting Points/Assets
+### Other Interesting Points/Assets/tutorials
 
 [Human Generator](https://github.com/makehumancommunity/mpfb2)
 
@@ -499,3 +499,5 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 [Kenney](https://kenney.nl/)
 
 [blendswap](https://www.blendswap.com/)
+
+[khanacademy](https://www.khanacademy.org) e.g. Pixar in a Box teaches the fundamentals of animation
