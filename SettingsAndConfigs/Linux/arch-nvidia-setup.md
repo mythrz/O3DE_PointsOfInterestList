@@ -456,6 +456,16 @@ sudo pacman -S blender
 # prime-run blender 
 ```
 
+- FreeCAD
+```
+sudo pacman -S freecad
+```
+
+- Krita
+```
+sudo pacman -S krita
+```
+
 ---
 
 - Calculator
@@ -558,6 +568,7 @@ pair XX:XX:XX:XX:XX:XX
 trust XX:XX:XX:XX:XX:XX
 connect XX:XX:XX:XX:XX:XX
 ```
+---
 
 ### Troubleshooting
 
