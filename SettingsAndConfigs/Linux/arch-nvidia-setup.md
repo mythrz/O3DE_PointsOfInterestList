@@ -529,6 +529,36 @@ open the TeX tab, build. In the output tab, choose LaTeX compiler to see the out
 
 ---
 
+- Bluetooth (this comes by default in EOS)
+
+Start
+```
+sudo systemctl start bluetooth
+```
+
+Start at boot
+```
+sudo systemctl enable bluetooth
+```
+
+Enter bluetooth interactive mode (console)
+```
+bluetoothctl
+
+    power on
+    agent on
+    default-agent
+    scan on
+```
+
+Place your device (mouse, headset, joystick, etc...) into pairing mode and locate the device ID (e.g., XX:XX:XX:XX:XX:XX aliasName) then pair, trust for auto-attempt to connect, and connect
+
+```
+pair XX:XX:XX:XX:XX:XX
+trust XX:XX:XX:XX:XX:XX
+connect XX:XX:XX:XX:XX:XX
+```
+
 ### Troubleshooting
 
 - if the updates stop working, use the package cleanup configuration and remove the cache then:
