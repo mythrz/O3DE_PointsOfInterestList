@@ -477,20 +477,8 @@ sudo pacman -S qalculate-gtk
 
 - social media videos/audio
 ```
-sudo pacman -S jq
-
-git clone https://github.com/Ld-Hagen/fix-opera-linux-ffmpeg-widevine.git
-cd fix-opera-linux-ffmpeg-widevine
-
-./install.sh
-```
-
----
-
-- Print-Screen with rectangle selection
-
-```
-sudo pacman -S flameshot
+sudo pacman -S vlc-plugins-all
+sudo pacman -Syu ffmpeg vlc gst-libav gst-plugins-good gst-plugins-bad gst-plugins-ugly
 ```
 
 ---
