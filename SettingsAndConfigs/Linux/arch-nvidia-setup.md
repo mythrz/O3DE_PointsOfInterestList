@@ -483,6 +483,14 @@ sudo pacman -Syu ffmpeg vlc gst-libav gst-plugins-good gst-plugins-bad gst-plugi
 
 ---
 
+- (Theoretically a more efficent) Discord wrapper
+
+```
+yay -S vesktop-bin
+```
+
+---
+
 - Steam (for playing, fun or testing your demos. Assuming you already have most drivers and vulkan)
 
 Follow the official suggestions available here: [archlinux.org Steam](https://wiki.archlinux.org/title/Steam). Summary:
