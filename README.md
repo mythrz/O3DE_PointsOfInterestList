@@ -18,7 +18,7 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@Open3DEngine Setting Up O3DE from GitHub](https://www.youtube.com/watch?v=GZF_6SkAXPw)
 
-[@rzDmyth Install Open 3D Engine (O3DE) with GitHub Developer Branch](https://www.youtube.com/watch?v=u-jpFuwVV1Y)
+[@rzDmyth Install Open 3D Engine (O3DE) with GitHub Developer Branch](https://www.youtube.com/watch?v=u-jpFuwVV1Y) Windows
 
 [Using VSCode to build O3DE or just debug](https://github.com/o3de/o3de/wiki/Using-VSCode-to-build-O3DE)
 
@@ -26,6 +26,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@genomestudios5714
  Setting up your Environment with VSCode and Ninja Build](https://www.youtube.com/watch?v=Kp0RjwijRaU)
+
+[@rzDmyth Open 3D Engine (O3DE) and EndeavourOS (EOS)](https://www.youtube.com/watch?v=dESU1Lf5Vng&pp=ygUacnpkbXl0aCBhcmNobGludXggZW9zIG8zZGU%3D) Arch Linux
 
 ---
 
