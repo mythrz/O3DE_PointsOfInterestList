@@ -587,6 +587,8 @@ sudo systemctl enable --now ufw # on boot
 sudo ufw enable # enable manually
 sudo ufw status verbose # show current status
 
+# check logs 
+sudo journalctl -u ufw -f 
 
 ```
 
