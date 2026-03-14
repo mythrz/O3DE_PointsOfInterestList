@@ -119,6 +119,16 @@ IgnorePkg = nvidia nvidia-dkms nvidia-utils nvidia-open nvidia-open-dkms nvidia-
 
 ---
 
+### Maintenance/Updates. Later on, if you just want to update
+
+```
+sudo pacman -Syu # you might be prompt to reboot. Make sure no errors occur
+sudo pacman -S linux-headers
+sudo dkms autoinstall
+```
+
+---
+
 ### 5. Vulkan Support, tools and OpenGL (Required)
 
 ```
@@ -426,7 +436,7 @@ This should be the setting that copies the compile_commands.json... But it is no
 "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json"
 ```
 
-### F. How to run it (Arch sometimes present strange UI dimensions)
+### F. How to run it (Arch sometimes presents strange UI dimensions)
 
 Create a new shortcut. 
 
@@ -448,6 +458,14 @@ Terminal=false
 ---
 
 ### outros
+
+- VirtualBox
+
+```
+sudo pacman -S virtualbox virtualbox-host-dkms # dkms so if you update, it builds it again
+sudo modprobe vboxdrv # load the modules
+sudo usermod -aG vboxusers $USER # add current user to VirtualBox group
+```
 
 - Blender
 ```
