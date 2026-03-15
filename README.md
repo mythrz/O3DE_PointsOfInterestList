@@ -175,6 +175,15 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 ---
 
+### Lighting
+
+[@WilliamFaucher Lighting in UE5 for beginners](https://www.youtube.com/watch?v=fSbBsXbjxPo) This is for UE5, but it is a good starting point to learn basics and adapt it to O3DE
+
+[@Open3DEngine
+ Create Scenes in O3DE Using KitBash3d/Blender](https://www.youtube.com/watch?v=Y6qJkdjHHyw) It covers some things related to lighting
+
+---
+
 ### Script Events, EBus and other Events
 
 [@genomestudios5714 O3DE Intensive - Learning Events Through  Character & Decoupling Input](https://www.youtube.com/watch?v=9_RhAtYFhKM)
