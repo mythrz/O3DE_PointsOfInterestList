@@ -29,7 +29,11 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@rzDmyth Open 3D Engine (O3DE) and EndeavourOS (EOS)](https://www.youtube.com/watch?v=dESU1Lf5Vng&pp=ygUacnpkbXl0aCBhcmNobGludXggZW9zIG8zZGU%3D) Arch Linux
 
+[xaque aur-o3de](https://github.com/xaque/aur-o3de)
+
 [spotrh - o3de-fedora](https://github.com/spotrh/o3de-fedora) This is probably outdated.
+
+[aCeTotal O3DE Flake](https://github.com/aCeTotal/o3de-flake) A Nix-Flake for building the O3DE game engine from source
 
 ---
 
@@ -96,6 +100,10 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 [AmplitudeAudio - integration-o3de](https://github.com/AmplitudeAudio/integration-o3de). A gem which brings features of the Amplitude Audio SDK into your game
 
 [BytesOfPiDev - O3deSteamAudio](https://github.com/BytesOfPiDev/O3deSteamAudio). SteamAudio O3DE Implementation
+
+[BytesOfPiDev - Conversation](https://github.com/BytesOfPiDev/Conversation). A conversation system and editor for O3DE that aims to provide a simple way to create, preview, and use branching dialogue. Think YarnSpinner.
+
+[SoLoud fork for O3DE](https://github.com/imginimg/soloud-o3de) SoLoud free, portable c/c++ audio engine for games. Based on [jarikomppa SoLoud](https://github.com/jarikomppa/soloud/tree/b3468d366ed9342cfa731475d267d1e2e7a3e81e)
 
 ---
 
@@ -165,7 +173,7 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 ---
 
-### Inputs
+### Inputs, controllers
 
 [O3DE Github OnInputChannelEventFiltered Fly Camera Example](https://github.com/o3de/o3de/blob/45437bc647e4e1831983d98e3917578bf9302c95/Gems/AtomLyIntegration/AtomBridge/Code/Source/FlyCameraInputComponent.cpp) This one uses raw keycodes. Cpp Code Samples
 
@@ -174,6 +182,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 [Discord discussion about the two approaches above](https://discord.com/channels/805939474655346758/842098167436279869/1380942733388152943)
 
 [Porcupine example](https://github.com/Porcupine-Factory/FirstPersonController/blob/main/Code/Source/Clients/FirstPersonControllerComponent.cpp)
+
+[rafaelvaloto - dualsense](https://github.com/rafaelvaloto/o3de-dualsense) Gem integrates Sony DualSense (PS5) controller into O3DE
 
 ---
 
@@ -189,12 +199,16 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 ---
 
-### Lighting
+### Lighting, date and time
 
 [@WilliamFaucher Lighting in UE5 for beginners](https://www.youtube.com/watch?v=fSbBsXbjxPo) This is for UE5, but it is a good starting point to learn basics and adapt it to O3DE
 
 [@Open3DEngine
  Create Scenes in O3DE Using KitBash3d/Blender](https://www.youtube.com/watch?v=Y6qJkdjHHyw) It covers some things related to lighting
+
+[loherangrin Day/Night Cycle Gem](https://github.com/loherangrin/addons.o3de.day-night-cycle). Provides an O3DE component to manage the change between day and night in scenes.
+
+[loherangrin Date & Time Gem](https://github.com/loherangrin/addons.o3de.date-time). Gem provides a set of classes and components to work with time
 
 ---
 
@@ -217,6 +231,9 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 [Documentation about events through interface](https://docs.o3de.org/docs/user-guide/programming/messaging/az-interface/)
 
 [Alejandro Blog: Creating a Request Bus in O3DE](https://aramallo.com/blog/o3de/creating-request-bus.html)
+
+[BytesOfPiDev o3de-interaction
+](https://github.com/BytesOfPiDev/o3de-interaction/tree/main) gem with code sample
 
 ---
 
@@ -270,9 +287,19 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 ---
 
+### C# (Unknown state of use for production)
+
+[WatchDogStudios - O3DESharp C# Scripting for O3DE](https://github.com/WatchDogStudios/O3DESharp) O3DESharp is a Gem that adds C# scripting support to the Open 3D Engine (O3DE) using the Coral .NET host library.
+
+[WatchDogStudios Coral](https://github.com/WatchDogStudios/Coral) WD Studios fork of Coral, with modifications for O3DESharp
+
+[RayPals sbox_o3de_backend](https://github.com/RayPals/sbox_o3de_backend) sbox is a C#/.NET game engine built on Valve's Source 2. This project aims to create an alternative backend that allows s&box's C# code to run on O3DE's open-source engine instead.
+
+---
+
 ### Lua 
 
-[[Lua] Reflecting Properties to the Editor](https://github.com/o3de/o3de/wiki/%5BLua%5D-Reflecting-Properties-to-the-Editor)
+[Lua Reflecting Properties to the Editor](https://github.com/o3de/o3de/wiki/%5BLua%5D-Reflecting-Properties-to-the-Editor)
 
 [LyShine Code Examples](https://github.com/o3de/o3de/tree/b94667fcf56b0af11f94632b71bbedc64ae6536e/Gems/LyShineExamples/Assets/UI/Scripts/LyShineExamples)
 
@@ -295,6 +322,10 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 [Lumberyard/O3DE Code Samples](https://github.com/drburton/Lua-for-Lumberyard)
 
 [Lumberyard Book code samples](https://github.com/Apress/beginning-game-dev-with-amazon-lumberyard)
+
+[petrocket LuaUtils](https://github.com/petrocket/LuaUtils)
+
+[FiniteStateGit - o3de-luascripts](https://github.com/FiniteStateGit/o3de-luascripts) A collection of Lua modules and scripts ported to O3DE (Generates terrain heightmaps with the diamond-square algorithm; 2D polygonal mesh-based pathfinding; Fast unit management with area-of-interest)
 
 ---
 
@@ -348,16 +379,6 @@ Similar to UE5 Blueprints
 
 ---
 
-### NavMesh
-
-[@genomestudios5714 O3DE Intensive - Recast Navmesh and Basic AI](https://www.youtube.com/watch?v=-6bGxpYaa2o)
-
-[@omacx00 O3DE navigation mesh basics](https://www.youtube.com/watch?v=XJz7ySD_wJk)
-
-[@TheDevShop FPS Series Amzn Lumberyard #9 - Setup A.I. & NavMesh](https://www.youtube.com/watch?v=4Aaaf_x8UHw)
-
----
-
 ### UI
 
 Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com/watch?v=NTmx-YP5iGI), Part 2 [@3dteacher Scripting Our Main Menu](https://www.youtube.com/watch?v=lejCUtLN2aU), Part 3[@3dteacher UI Scripting - Disable Main Menu](https://www.youtube.com/watch?v=jSZiLTmcyJA&list=PLYL9odJYZleKj4QeD7YA0iQcYt_YvlHg8&index=10)
@@ -383,17 +404,23 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 [O3DE ROS 2 Gem](https://www.docs.o3de.org/docs/user-guide/gems/reference/robotics/ros2/)
 
+[michalpelka Ros2WarehouseDemo](https://github.com/michalpelka/Ros2WarehouseDemo) project demonstrates the usage of ROS2 navigation along with the O3DE simulation.
+
 [@Open3DEngine O3DE Robotics Warehouse Demo](https://www.youtube.com/watch?v=Zx-6VhxqLKc)
 
 [AWS: Running High-fidelity O3DE simulations in AWS RoboMaker](https://aws.amazon.com/blogs/robotics/running-high-fidelity-o3de-simulations-in-aws-robomaker/); [ROSConDemo Dockerfiles](https://github.com/o3de/ROSConDemo/tree/main/docker); [RobotVacuumSample](https://github.com/o3de/RobotVacuumSample/tree/development/Docker)
 
+[husarion o3de-docker](https://github.com/husarion/o3de-docker). Docker image containing O3DE simulations for Husarion robots.
+
 ---
 
-### Databases Data Storage
+### Databases Data Storage, Save and Load
 
 [SQLite Lumberyard Gem](https://github.com/alatnet/Lumberyard-SQLite-Gem)
 
 [Postgree SQL Gem for Lumberyard](https://github.com/ash-j-f/PLY-public)
+
+[Porcupine-Factory - SaveLoad](https://github.com/Porcupine-Factory/SaveLoad). Save Load Gem licensed under the Expat license
 
 ---
 
@@ -409,6 +436,8 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 [Build digraph by scanning EBuses](https://github.com/SelfishOlex/EBusScanner)
 
+[petrocket O3DE IMGUI Zep Gem](https://github.com/petrocket/o3de-imguizep?tab=readme-ov-file). O3DE IMGUI Zep Gem integrates the Zep text editor into O3DE.
+
 --- 
 
 ### Profiler, Performance analysis
@@ -419,9 +448,11 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 ---
 
-### Game Analytics
+### Game Analytics, Telemetry and Ads
 
 [@rzDmyth AWS Game Analytics and Open 3D Engine O3DE](https://www.youtube.com/watch?v=FOK6NJPp4Qk)
+
+[Atmosaero Yandex-Ads-SDK-O3DE](https://github.com/Atmosaero/Yandex-Ads-SDK-O3DE) Integration of Yandex Mobile Ads SDK for O3DE Android applications.
 
 ---
 
@@ -431,11 +462,25 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 [Team-Plutinite o3de-steam-gem](https://github.com/Team-Plutinite/o3de-steam-gem) Gem connecting the Steamworks SDK to O3DE.
 
+[ericliusunniy - NakamaClientGem](https://github.com/ericliusunniy/NakamaClientGem)
+
+[CEF-Docker-O3DE](https://github.com/MisterChief53/CEF-Docker-O3DE) WebView implemented with CEF made to work on Docker for interaction within O3DE
+
 ---
 
-### AI
+### AI, NPCs behaviour, NavMesh
+
+[@genomestudios5714 O3DE Intensive - Recast Navmesh and Basic AI](https://www.youtube.com/watch?v=-6bGxpYaa2o)
+
+[@omacx00 O3DE navigation mesh basics](https://www.youtube.com/watch?v=XJz7ySD_wJk)
+
+[@TheDevShop FPS Series Amzn Lumberyard #9 - Setup A.I. & NavMesh](https://www.youtube.com/watch?v=4Aaaf_x8UHw)
 
 [SparkyStudios - o3de-gem-ssbehaveai](https://github.com/SparkyStudios/o3de-gem-ssbehaveai) A starting point to implement AI capabilites in O3DE projects
+
+[mapret - O3DEPathTracing](https://github.com/mapret/O3DEPathTracing)
+
+[byrcolin O3DE Pilot](https://github.com/byrcolin/o3de-pilot)
 
 ---
 
@@ -443,7 +488,7 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 [Project The Moon](https://github.com/o3de/Protect-the-Moon) First Episode: [@Open3DEngine 01 Project Setup](https://www.youtube.com/watch?v=rJBAChtWPCs)
 
-First episode: [@Open3DEngine O3DE Pong Game Tutorial, Part 1: Project and Level Creation](https://www.youtube.com/watch?v=kK0XnYFKw38) 
+First episode: [@Open3DEngine O3DE Pong Game Tutorial, Part 1: Project and Level Creation](https://www.youtube.com/watch?v=kK0XnYFKw38) .[hughbagan o3de-pong](https://github.com/hughbagan/o3de-pong)
 
 Old Lumberyard channel with multiple examples, tutorials and tips. Many of these things can be repurposed into O3DE. [@TheDevShop Getting Started with Amazon Lumberyard #0 - Overview](https://www.youtube.com/watch?v=UdG-_FNbL4E)
 
@@ -467,6 +512,11 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 
 [Vehicle assets sample + Vehicle Dynamics Gem by RobotecAI](https://github.com/pawelbudziszewski/o3de-sample-vehicle-assets)
 
+[Mechazo11 o3de_nasa_rover
+](https://github.com/Mechazo11/o3de_nasa_rover) Docker script to build the O3DE_NASA_ROVER_SIM project
+
+[Mechazo11 Mars Yard Gem](https://github.com/Mechazo11/MarsYardGem) Enviornment Asset Gem created to test robots based on the NASA JPL's Mars Yard testing ground.
+
 [Volumetric Clouds Gem and Demo](https://github.com/lumbermixalot/VolumetricCloudsForO3DE)
 
 [Showcase anti-aliasing and transparency features in the Lumberyard game engine](https://github.com/nginetechnologies/sample-bistro.nproject)
@@ -489,11 +539,17 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 
 [o3de.org samples and templates](https://docs.o3de.org/docs/learning-guide/samples/templates/)
 
-[loherangrin Day/Night Cycle Gem](https://github.com/loherangrin/addons.o3de.day-night-cycle). Provides an O3DE component to manage the change between day and night in scenes.
+[AMZN-alexpete o3de-gamejam](https://github.com/AMZN-alexpete/o3de-gamejam/tree/game)
+
+[AMZN-alexpete o3de-gamejam-2021](https://github.com/AMZN-alexpete/o3de-gamejam-2021)
 
 [www.co3dex.com](https://www.co3dex.com/) HogJonny personal knowledge repository. A collection of technical art tutorials, tools, workflows, and explorations across 3D graphics, game engines, real-time rendering, procedural generation, and creative technology (O3DE, Unreal, Unity, Blender, Maya, or custom engines) [github here](https://github.com/HogJonny-AMZN/CO3DEX)
 
-[Porcupine-Factory - SaveLoad](https://github.com/Porcupine-Factory/SaveLoad). Save Load Gem licensed under the Expat license
+[knmcguire O3DE RoboBall Tutorial Project](https://github.com/knmcguire/o3de_roboball)
+
+[PHandradee ProjectK-O3DE](https://github.com/PHandradee/ProjectK-O3DE)
+
+[Ornstein89 Open3DE-ExtSimInt-Gem](https://github.com/Ornstein89/Open3DE-ExtSimInt-Gem) gem providing integration with external simulation model: video output to external model and motion input from external model
 
 ---
 
@@ -546,3 +602,19 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 [blendswap](https://www.blendswap.com/)
 
 [khanacademy](https://www.khanacademy.org) e.g. Pixar in a Box teaches the fundamentals of animation
+
+---
+
+### Unknowns
+
+[WatchDogStudios - O3DESurfelGI](https://github.com/WatchDogStudios/O3DESurfelGI)
+
+[rossbridger O3DE-Blast-Gem](https://github.com/rossbridger/O3DE-Blast-Gem)
+
+[WatchDogStudios fidelityfx-chaos](https://github.com/WatchDogStudios/fidelityfx-chaos) Modified/Contained fork of AMD's FidelityFX for O3DE/Chaos
+
+[mayusaki3 SansaCloth](https://github.com/mayusaki3/SansaCloth) SDF-based anti-clipping cloth shader foundation for Unity and O3DE (Atom).
+
+---
+---
+---
