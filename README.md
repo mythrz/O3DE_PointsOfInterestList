@@ -29,6 +29,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@rzDmyth Open 3D Engine (O3DE) and EndeavourOS (EOS)](https://www.youtube.com/watch?v=dESU1Lf5Vng&pp=ygUacnpkbXl0aCBhcmNobGludXggZW9zIG8zZGU%3D) Arch Linux
 
+[spotrh - o3de-fedora](https://github.com/spotrh/o3de-fedora) This is probably outdated.
+
 ---
 
 ### Export Project: Executable game
@@ -77,6 +79,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@rzDmyth O3DE: Terrain System](https://www.youtube.com/watch?v=7gBP3xHs7kw&t=7s)
 
+[CesiumGS - 3D geospatial ecosystem to Open 3D Engine](https://github.com/CesiumGS/cesium-o3de)
+
 ---
 
 ### Sound
@@ -89,9 +93,13 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [Audio gem for Lumberyard](https://github.com/alatnet/Lumberyard-Alternative-Audio-Gem)
 
+[AmplitudeAudio - integration-o3de](https://github.com/AmplitudeAudio/integration-o3de). A gem which brings features of the Amplitude Audio SDK into your game
+
+[BytesOfPiDev - O3deSteamAudio](https://github.com/BytesOfPiDev/O3deSteamAudio). SteamAudio O3DE Implementation
+
 ---
 
-### Import Assets
+### Import/Export Assets
 
 [@Open3DEngine Porting Assets from Sketchfab into O3DE](https://www.youtube.com/watch?v=xUwCf6B-rZQ)
 
@@ -104,6 +112,10 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 [@rzDmyth O3DE and Blender: Create and import your 3D model (fbx) with separate materials](https://www.youtube.com/watch?v=WDUBGAHAHz0)
 
 [Kursad-k O3DE Blender bridge](https://github.com/kursad-k/o3de_blender_bridge)
+
+[galibzon O3DE import](https://github.com/galibzon/o3dimport) Temporary Holder for o3dimport Gem
+
+[ossls blendyard](https://github.com/ossls/blendyard). A collection of tools to make it easier to create content for O3DE using Blender.
 
 --- 
 
@@ -171,6 +183,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@TheDevShop O3DE - Building/Setting up PopcornFX! VFX for O3DE](https://www.youtube.com/watch?v=pAfoo4Xsuk0)
 
+[PopcornFX - O3DE PopcornFX Plugin](https://github.com/PopcornFX/O3DEPopcornFXPlugin)
+
 General explanation about particles: [Ex-Blizzard Dev Writes A Particle System From Scratch - Never Engine Devlog 1](https://www.youtube.com/watch?v=ahOfNgvQ93Q)
 
 ---
@@ -236,7 +250,11 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 ### Shader
 
-[RenderJoy 2.0](https://github.com/lumbermixalot/RenderJoy)
+[RenderJoy 2.0](https://github.com/lumbermixalot/RenderJoy). A ShaderToy Clone for O3DE (Gem + Demo Project). A sandbox to write multi-pass pixel shaders.
+
+[jeremyong - VSCode Extension. Navigation for .shader, .pass, .azsl, .azsli, and .srgi files/functions](https://github.com/jeremyong/o3de-extension)
+
+[Atmosaero ShaderKit-O3DE](https://github.com/Atmosaero/ShaderKit-O3DE)
 
 ---
 
@@ -411,6 +429,16 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 [TressFX Maya 2025 Exporter + Curves-to-Hair + O3DE Hair Cards Material](https://github.com/victorhugomagno/Hair_Toolkit_for_O3DE)
 
+[Team-Plutinite o3de-steam-gem](https://github.com/Team-Plutinite/o3de-steam-gem) Gem connecting the Steamworks SDK to O3DE.
+
+---
+
+### AI
+
+[SparkyStudios - o3de-gem-ssbehaveai](https://github.com/SparkyStudios/o3de-gem-ssbehaveai) A starting point to implement AI capabilites in O3DE projects
+
+---
+
 ### Other Tutorials
 
 [Project The Moon](https://github.com/o3de/Protect-the-Moon) First Episode: [@Open3DEngine 01 Project Setup](https://www.youtube.com/watch?v=rJBAChtWPCs)
@@ -427,7 +455,7 @@ Old Official Lumberyard channel. Used to have multiple tutorials, they have now 
 
 ---
 
-### Game Templates, Jams, Tool-Kits, Game-examples
+### Game Templates, Jams, Tool-Kits, Game-examples, Blogs
 
 Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stealth, Real-Time Strategy, Turn-Based Tactics, Twin-Stick Shooter. [Minimal O3DE Templates GitHub](https://github.com/loherangrin/templates.o3de.minimal). [@Open3DEngine video](https://www.youtube.com/watch?v=z5VwAG9SC-4). [@matteogrs channel](https://www.youtube.com/@matteogrs)
 
@@ -460,6 +488,12 @@ Action RPG, Builder, First-Person-Shooter, Kart Racing, Platformer, Puzzle, Stea
 [Turn Based: Planet Survival Game](https://github.com/o3de/PlanetSurvivalGame)
 
 [o3de.org samples and templates](https://docs.o3de.org/docs/learning-guide/samples/templates/)
+
+[loherangrin Day/Night Cycle Gem](https://github.com/loherangrin/addons.o3de.day-night-cycle). Provides an O3DE component to manage the change between day and night in scenes.
+
+[www.co3dex.com](https://www.co3dex.com/) HogJonny personal knowledge repository. A collection of technical art tutorials, tools, workflows, and explorations across 3D graphics, game engines, real-time rendering, procedural generation, and creative technology (O3DE, Unreal, Unity, Blender, Maya, or custom engines) [github here](https://github.com/HogJonny-AMZN/CO3DEX)
+
+[Porcupine-Factory - SaveLoad](https://github.com/Porcupine-Factory/SaveLoad). Save Load Gem licensed under the Expat license
 
 ---
 
