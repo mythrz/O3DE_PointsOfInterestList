@@ -206,13 +206,29 @@ CodeLLDB from Vadimcn
 
 Kylin Clangd  from KylinldeTeam
 
+Lua Debugger For O3DE from Galib Arrieta (VSCode only)
+
+NOTE: there was one instance that the Kylin addon was not working correctly with CMake. In this circumstances, just configure and build directly from an OS termninal
+
+*Other useful Extensions:*
+
+Kylin Python(with jedi language server) from KylinldeTeam
+
 Structured Text Language Support from Serhioromano
 
 YAML from Red Hat
 
-Lua Debugger For O3DE from Galib Arrieta (VSCode only)
+Language Support for Java(TM) by Red Hat from Red Hat
 
-NOTE: there was one instance that the Kylin addon was not working correctly with CMake. In this circumstances, just configure and build directly from an OS termninal
+R Extension for Visual Studio Code from REditorSupport
+
+R Syntax from REditorSupport
+
+XML from Red Hat 
+
+Qt Support from KylinldeTeam 
+
+C# from muhammad-sammy
 
 ---
 
