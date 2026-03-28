@@ -214,6 +214,12 @@ NOTE: there was one instance that the Kylin addon was not working correctly with
 
 Kylin Python(with jedi language server) from KylinldeTeam
 
+```
+sudo pacman -S python-pylint
+sudo pacman -S python-jedi
+
+```
+
 Structured Text Language Support from Serhioromano
 
 YAML from Red Hat
