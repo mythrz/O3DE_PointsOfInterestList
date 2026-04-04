@@ -273,6 +273,10 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 [Atmosaero ShaderKit-O3DE](https://github.com/Atmosaero/ShaderKit-O3DE)
 
+[Atmosaero AZSL Basic](https://open-vsx.org/extension/Atmosaero/azsl-basic) Open-VSX/VSCodium | Minimal syntax highlighting and language configuration for AZSL (O3DE/Atom). 
+
+[Atmosaero AZSL Basic](https://marketplace.visualstudio.com/items?itemName=Atmosaero.azsl-basic) MS/VSCode | Minimal syntax highlighting and language configuration for AZSL (O3DE/Atom). 
+
 ---
 
 ### HDRI
