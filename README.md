@@ -267,13 +267,15 @@ General explanation about particles: [Ex-Blizzard Dev Writes A Particle System F
 
 ### Shader
 
+[o3de.org - Get Started with Material Types and Shaders](https://docs.o3de.org/docs/learning-guide/tutorials/rendering/get-started-materialtypes-and-shaders/)
+
 [@Open3DEngine O3DE Shader Management Console](https://www.youtube.com/watch?v=0Z7kGv5z3pI)
 
 [RenderJoy 2.0](https://github.com/lumbermixalot/RenderJoy). A ShaderToy Clone for O3DE (Gem + Demo Project). A sandbox to write multi-pass pixel shaders.
 
 [jeremyong - VSCode Extension. Navigation for .shader, .pass, .azsl, .azsli, and .srgi files/functions](https://github.com/jeremyong/o3de-extension)
 
-[Atmosaero ShaderKit-O3DE](https://github.com/Atmosaero/ShaderKit-O3DE)
+[Atmosaero ShaderKit-O3DE](https://github.com/Atmosaero/ShaderKit-O3DE). Has shader examples
 
 [Atmosaero AZSL Basic](https://open-vsx.org/extension/Atmosaero/azsl-basic) Open-VSX/VSCodium | Minimal syntax highlighting and language configuration for AZSL (O3DE/Atom). 
 
