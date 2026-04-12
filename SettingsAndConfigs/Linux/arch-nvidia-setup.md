@@ -489,6 +489,39 @@ sudo modprobe vboxdrv # load the modules
 sudo usermod -aG vboxusers $USER # add current user to VirtualBox group
 ```
 
+- libvirt/virt-manager GUI
+
+```
+#requirements
+sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq vde2 openbsd-netcat libvirt ebtables iptables libguestfs swtpm
+
+# enable and start
+sudo systemctl enable --now libvirtd
+
+# sync user with libvirt
+sudo usermod -aG libvirt $(whoami)
+
+# run
+virt-manager
+
+# Edit -> Connection Details -> Virtual Networks tab -> Highlight "default" -> check the box "Autostart" -> Click Apply and Play button 
+
+# if it gives an Error starting network 'default'... run the command bellow then try the command above again
+sudo firewall-cmd --reload
+
+# you might not have enough space on the default /var/lib/libvirt/images
+# consider adding a new folder inside home. Create a new folder libvirtVMs
+# Edit -> Connection Details -> Storage tab -> + (add) bottom left to add a new file-system bellow the default -> name it and point it to the created folder in your home "libvirtVMs"
+# you can now create new virtual machines
+
+
+# during installation, if 3D/OpenGL accelaration does not work.
+# https://bbs.archlinux.org/viewtopic.php?id=299452
+# or just turn it off and use CPU only
+```
+
+---
+
 - Blender
 ```
 sudo pacman -S blender
