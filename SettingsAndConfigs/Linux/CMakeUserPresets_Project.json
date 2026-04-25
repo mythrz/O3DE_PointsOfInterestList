@@ -42,9 +42,8 @@
             "displayName": "Build Editor Profile and AzTestRunner (Custom)",
             "description": "Build Editor target with profile config",
             "configurePreset": "custom-linux-clang-ninja",
-            "configuration": "debug",
             "targets": ["Editor", "NameOfYourProject.GameLauncher", "AzTestRunner", "AtomCore.Tests"],
-            "configuration": "profile",
+            "configuration": "debug",
             "jobs": 8 // adjust to your cores or remove
         }
     ]
