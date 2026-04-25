@@ -30,8 +30,8 @@
     "buildPresets":[
         {
             "name": "build-editor-profile",
-            "displayName": "Build Editor Profile (Custom)",
-            "description": "Build Editor target with profile config",
+            "displayName": "Build Editor Debug (Custom)",
+            "description": "Build Editor target with debug config",
             "configurePreset": "custom-linux-clang-ninja",
             "targets": ["Editor", "NameOfYourProject.GameLauncher"],
             "configuration": "debug",
@@ -39,8 +39,8 @@
         },
         {
             "name": "build-editor-and-AzTestRunner-profile",
-            "displayName": "Build Editor Profile and AzTestRunner (Custom)",
-            "description": "Build Editor target with profile config",
+            "displayName": "Build Editor Debug and AzTestRunner (Custom)",
+            "description": "Build Editor target with debug config",
             "configurePreset": "custom-linux-clang-ninja",
             "targets": ["Editor", "NameOfYourProject.GameLauncher", "AzTestRunner", "AtomCore.Tests"],
             "configuration": "debug",
