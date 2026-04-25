@@ -200,11 +200,11 @@ yay -S vscodium
 
 CMake Intellisence from KylinldeTeam
 
-Cmake Tools (Fork) from KylinldeTeam
+Kylin CMake Workflow from KylinldeTeam
 
 CodeLLDB from Vadimcn
 
-Kylin Clangd  from KylinldeTeam
+Kylin Clangd from KylinldeTeam
 
 Lua Debugger For O3DE from Galib Arrieta (VSCode only)
 
