@@ -196,7 +196,7 @@ yay -S vscodium
 
 *Extensions:*
 
-CMake from twxs
+~~CMake from twxs~~
 
 CMake Intellisence from KylinldeTeam
 
