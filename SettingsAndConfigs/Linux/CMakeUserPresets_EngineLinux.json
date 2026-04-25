@@ -3,11 +3,11 @@
     "configurePresets": [
         {
             "name": "custom-linux-clang-ninja-compile-commands",
-            "displayName": "Linux Clang Ninja (Custom CC)",
+            "displayName": "Clang Ninja (Custom CC)",
             "generator": "Ninja Multi-Config",
             "binaryDir": "${sourceDir}/build/linux_compileCommands",
             "cacheVariables": {
-                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages",
+                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages-dev",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_UNITY_BUILD": "OFF",
                 "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE",
@@ -16,11 +16,11 @@
         },
         {
             "name": "custom-linux-clang-ninja",
-            "displayName": "Linux Clang Ninja (Custom)",
+            "displayName": "Clang Ninja (Custom)",
             "generator": "Ninja Multi-Config",
             "binaryDir": "${sourceDir}/build/linux",
             "cacheVariables": {
-                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages",
+                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages-dev",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF",
                 "CMAKE_UNITY_BUILD": "ON",
                 "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE",
