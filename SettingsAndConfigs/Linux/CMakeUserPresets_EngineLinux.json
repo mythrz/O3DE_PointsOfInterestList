@@ -9,6 +9,7 @@
             "cacheVariables": {
                 "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages-dev",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_BUILD_TYPE": "Debug", 
                 "CMAKE_UNITY_BUILD": "OFF",
                 "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE",
                 "CMAKE_CXX_FLAGS": "-Wno-error -Wno-warnings"
@@ -21,7 +22,8 @@
             "binaryDir": "${sourceDir}/build/linux",
             "cacheVariables": {
                 "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages-dev",
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF", // ON if you want it on the project folders
+                "CMAKE_BUILD_TYPE": "Debug", 
                 "CMAKE_UNITY_BUILD": "ON",
                 "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE",
                 "CMAKE_CXX_FLAGS": "-Wno-error -Wno-warnings"
@@ -35,7 +37,7 @@
             "description": "Build Editor target with profile config",
             "configurePreset": "custom-linux-clang-ninja",
             "targets": ["Editor"],
-            "configuration": "profile",
+            "configuration": "debug",
             "jobs": 4
         },
         {
@@ -44,7 +46,7 @@
             "description": "Build Editor target with profile config",
             "configurePreset": "custom-linux-clang-ninja",
             "targets": ["Editor", "AzTestRunner", "AtomCore.Tests"],
-            "configuration": "profile",
+            "configuration": "debug",
             "jobs": 4
         }
     ]
