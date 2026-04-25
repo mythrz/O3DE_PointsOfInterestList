@@ -34,7 +34,7 @@
         {
             "name": "build-editor-profile",
             "displayName": "Build Editor Debug (Custom)",
-            "description": "Build Editor target with profile config",
+            "description": "Build Editor target with debug config",
             "configurePreset": "custom-linux-clang-ninja",
             "targets": ["Editor"],
             "configuration": "debug",
@@ -43,7 +43,7 @@
         {
             "name": "build-editor-and-AzTestRunner-profile",
             "displayName": "Build Editor Debug and AzTestRunner (Custom)",
-            "description": "Build Editor target with profile config",
+            "description": "Build Editor target with debug config",
             "configurePreset": "custom-linux-clang-ninja",
             "targets": ["Editor", "AzTestRunner", "AtomCore.Tests"],
             "configuration": "debug",
