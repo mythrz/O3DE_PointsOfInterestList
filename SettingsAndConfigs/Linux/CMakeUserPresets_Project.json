@@ -19,6 +19,11 @@
             "displayName": "Linux Clang Ninja (Custom)",
             "generator": "Ninja Multi-Config",
             "binaryDir": "${sourceDir}/build/linux",
+            "environment": { // archlinux has trouble in finding these installed libs. Add this block as a work around
+                "CXXFLAGS": "-I/usr/include/minizip",
+                "CFLAGS": "-I/usr/include/minizip",
+                "CPATH": "/usr/include/minizip"
+            },
             "cacheVariables": {
                 "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages-dev",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF", // ON if you need it inside your project folder
