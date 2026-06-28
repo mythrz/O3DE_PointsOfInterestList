@@ -1,6 +1,7 @@
 ### Dual OS suggestions: E.g. Dual‑Disk Partition Layout Windows + Arch Linux (EndeavourOS)
 
-- Consider a layout that separates Windows and Arch Linux onto different disks, each with its own EFI System Partition (ESP).
+- I have recorded a video showcasing the installation of [O3DE in EOS](https://youtu.be/dESU1Lf5Vng)
+- Consider a layout that separates Windows and Arch Linux onto different disks.
 - Consider Ventoy USB-pen, since it allows multiple OS to boot from the same pen.
 - Use UEFI when creating the USB
 - Install Windows first in Drive1
