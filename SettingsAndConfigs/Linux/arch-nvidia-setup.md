@@ -209,6 +209,8 @@ Kylin Clangd from KylinldeTeam
 
 Lua Debugger For O3DE from Galib Arrieta (VSCode only)
 
+O3DE Lua Runtime API from Atmosaero
+
 NOTE: there was one instance that the Kylin addon was not working correctly with CMake. In this circumstances, just configure and build directly from an OS termninal
 
 *Other useful Extensions:*
@@ -236,6 +238,8 @@ XML from Red Hat
 Qt Support from KylinldeTeam 
 
 C# from muhammad-sammy
+
+SQLite3 Editor from yy0931
 
 ---
 
