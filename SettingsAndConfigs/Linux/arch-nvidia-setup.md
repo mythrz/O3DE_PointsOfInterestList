@@ -527,12 +527,19 @@ sudo firewall-cmd --reload
 
 ---
 
+**CADS, ART, VFX, 2D/3D**
+
 - Blender
+
+**NOTE:** beware of the python version your system is using and Blender version. Blender tends to lag behind, and will not work as expected when they mismatch. Consider downloading Blender from their website to avoid problems.
+
 ```
 sudo pacman -S blender
 #-- if you are running from a PC with 2 GPUs:
 # prime-run blender 
 ```
+
+Interesting interop if you are into AI: [Claude + Blender MCP](https://claude.com/resources/tutorials/using-the-blender-connector-in-claude)
 
 - FreeCAD
 ```
@@ -603,21 +610,54 @@ sudo pacman -S steam
 
 - LaTeX (full to avoid missing of packages)
 
-```
-sudo pacman -S texlive-meta
+```cmd
+sudo pacman -S texlive-meta 
 ```
 
-LaTeX Workshop by Jame-Yu
+- or smaller version with only the basics
 
-open the TeX tab, build. In the output tab, choose LaTeX compiler to see the outcome of the build
+```cmd
+sudo pacman -S texlive-basic texlive-latex texlive-latexextra
+```
+
+- LaTeX Workshop by Jame-Yu (open the TeX tab, build. In the output tab, choose LaTeX compiler to see the outcome of the build.)
+
+- If you use the smaller version and it complains about not compiling, change to pdflatex. Open the vscode/codium settings and set the following options:
+
+```json
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-no-shell-escape", // prevents -shell-escape or Arbitrary external commands to be executed (potentially better security when restricted \write18 is disabled)
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        }
+    ],
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    }
+```
 
 ---
 
 - Bluetooth (this comes by default in EOS)
 
-Start
+Start & Stop
 ```
 sudo systemctl start bluetooth
+#sudo systemctl stop bluetooth
 ```
 
 Start at boot
