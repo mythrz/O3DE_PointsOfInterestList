@@ -1,0 +1,82 @@
+{
+    "workbench.colorTheme": "Dark Modern",
+    "window.border": "system",
+    "window.density.editorTabHeight": "compact",
+    "workbench.editor.revealIfOpen": true,
+    "editor.wordWrap": "on",
+    "chat.editor.wordWrap": "on",
+    "notebook.output.wordWrap": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.experimental.showMoves": true,
+    "editor.renderWhitespace": "all",
+    "editor.copyWithSyntaxHighlighting": false,
+    "debug.toolBarLocation": "commandCenter",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "dotnet-test-explorer.enableTelemetry": false,
+    "continue.telemetryEnabled": false,
+    
+    "continue.showInlineTip": false,
+    "dotnet.testWindow.testExplorerVerbosity": "trace",
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "*.cs": "${capture}.designer.cs,${capture}.g.cs,${capture}.generated.cs,${capture}.run.json,${capture}.settings.json,${capture}.settings.*.json",
+        "*.csproj": "${capture}.csproj.user",
+        "*.json": "${capture}.Development.json",
+        "*.cshtml": "${capture}.cshtml.cs,${capture}.cshtml.css",
+        "*.razor": "${capture}.razor.cs,${capture}.razor.css",
+        "*.resx": "${capture}.Designer.cs",
+        "*.xaml": "${capture}.xaml.cs"
+    },
+    
+    "cmake.automaticReconfigure": false,
+    "cmake.buildBeforeRun": false,
+    "cmake.configureOnOpen": false,
+    "cmake.configureOnEdit": false,
+    "cmake.enableAutomaticKitScan": false,
+    
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-no-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        }
+    ],
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "latex-workshop.latex.autoBuild.run": "never",
+    
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    
+    "yaml.schemas": {
+        "file:///home/YourUserName/.vscode-oss/extensions/continue.continue-2.0.0-linux-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
+    }
+}
