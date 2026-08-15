@@ -207,6 +207,8 @@ CodeLLDB from Vadimcn
 
 Kylin Clangd from KylinldeTeam
 
+Clangd from llvm-vs-code-extensions
+
 Lua Debugger For O3DE from Galib Arrieta (VSCode only)
 
 O3DE Lua Runtime API from Atmosaero
