@@ -187,6 +187,16 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 ---
 
+### Character creation and customisation 
+
+[@Andi_Rutz Modular characters with Blender 3D - Tutorial](https://www.youtube.com/watch?v=CwLsJB8GrEU)
+
+[@grabbitt Making a Low Poly Modular Monster in Blender](https://www.youtube.com/watch?v=jNfjtu9pb5M)
+
+[o3de.org docs](https://development--o3deorg.netlify.app/docs/user-guide/visualization/animation/actor-multiple-skin/)
+
+---
+
 ### VFX
 
 [@Open3DEngine Introduction to O3DE PopcornFX Gem Workflow, An Advanced VFX Solution](https://www.youtube.com/watch?v=iU9_zos-adg)
