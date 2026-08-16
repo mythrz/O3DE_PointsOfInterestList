@@ -189,11 +189,13 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 ### Character creation and customisation 
 
-[@Andi_Rutz Modular characters with Blender 3D - Tutorial](https://www.youtube.com/watch?v=CwLsJB8GrEU)
+[@Andi_Rutz Modular characters with Blender 3D - Tutorial](https://www.youtube.com/watch?v=CwLsJB8GrEU), 2nd video [@Andi_Rutz Modular characters with Blender 3D - Tutorial](https://www.youtube.com/watch?v=I98_U1k7pmk)
 
 [@grabbitt Making a Low Poly Modular Monster in Blender](https://www.youtube.com/watch?v=jNfjtu9pb5M)
 
 [o3de.org docs](https://development--o3deorg.netlify.app/docs/user-guide/visualization/animation/actor-multiple-skin/)
+
+[@CGDive BEGINNER Blender Rigging Course (2026)](https://www.youtube.com/watch?v=Ldki5txSn5U)
 
 ---
 
