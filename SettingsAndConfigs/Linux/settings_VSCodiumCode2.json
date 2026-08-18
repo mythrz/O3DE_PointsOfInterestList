@@ -78,5 +78,19 @@
         "file:///home/YourUserName/.vscode-oss/extensions/continue.continue-2.0.0-linux-x64/config-yaml-schema.json": [
             ".continue/**/*.yaml"
         ]
-    }
+    },
+
+    "sqlite3-editor.ui.tableSelector.displayShadowTables": true,
+    "sqlite3-editor.ui.tableSelector.displayColumns": true,
+    
+    "ltex.additionalRules.enablePickyRules": true,
+    "ltex.additionalRules.motherTongue": "en-GB",
+    "ltex.language": "en-GB",
+    "ltex.enabled": [
+        "bibtex",
+        "context",
+        "context.tex",
+        "latex",
+        "markdown",
+    ]
 }
