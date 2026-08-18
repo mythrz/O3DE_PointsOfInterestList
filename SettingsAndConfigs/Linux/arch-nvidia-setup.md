@@ -243,6 +243,8 @@ C# from muhammad-sammy
 
 SQLite3 Editor from yy0931
 
+LTeX+ – grammar/spell checking using LanguageTool from ltex-plus
+
 ---
 
 - Source Control with git: https (recommended)
