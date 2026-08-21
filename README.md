@@ -197,6 +197,8 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@CGDive BEGINNER Blender Rigging Course (2026)](https://www.youtube.com/watch?v=Ldki5txSn5U)
 
+[@OzzO_Official Weight Painting in Blender](https://www.youtube.com/watch?v=tUIIauuXveE)
+
 [@stefan_3d_ai Modular Character with AI (Full Workflow)](https://www.youtube.com/watch?v=gZIxrX1n2D4)
 
 ---
