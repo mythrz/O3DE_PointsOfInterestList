@@ -197,7 +197,7 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 [@CGDive BEGINNER Blender Rigging Course (2026)](https://www.youtube.com/watch?v=Ldki5txSn5U)
 
-Weight Paint: [@OzzO_Official Weight Painting in Blender](https://www.youtube.com/watch?v=tUIIauuXveE), [@PierrickPicaut_P2DESIGN Blender Trick Makes Weight Painting easy](https://www.youtube.com/watch?v=4VI5jk7pZag), [@PierrickPicaut_P2DESIGN Blender weights painting & skinning trick](https://www.youtube.com/watch?v=tRgh8doVYzI)
+Weight Paint: [@OzzO_Official Weight Painting in Blender](https://www.youtube.com/watch?v=tUIIauuXveE), [@PierrickPicaut_P2DESIGN Blender Trick Makes Weight Painting easy](https://www.youtube.com/watch?v=4VI5jk7pZag), [@PierrickPicaut_P2DESIGN Blender weights painting & skinning trick](https://www.youtube.com/watch?v=tRgh8doVYzI), [@chimericcurios Weight Paint](https://www.youtube.com/watch?v=k8DQY_DNDPM&list=PLPPl7J8pvyClZ9lBVyxzc1kyqRkCTBjIn)
 
 [@stefan_3d_ai Modular Character with AI (Full Workflow)](https://www.youtube.com/watch?v=gZIxrX1n2D4)
 
