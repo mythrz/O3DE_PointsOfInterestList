@@ -201,6 +201,8 @@ Weight Paint: [@OzzO_Official Weight Painting in Blender](https://www.youtube.co
 
 [@stefan_3d_ai Modular Character with AI (Full Workflow)](https://www.youtube.com/watch?v=gZIxrX1n2D4)
 
+[Blender Addon: Human generator and editor](https://extensions.blender.org/add-ons/mpfb/) is a good starting point to create characters. Blender 5.2 asset library has a few default models too.
+
 ---
 
 ### VFX
