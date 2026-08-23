@@ -187,13 +187,13 @@ Projects, Tutorials, Docs, Videos, Blogs, etc... It is a list of multiple things
 
 ---
 
-### Character creation and customisation 
+### Character creation, customisation
 
 [@Andi_Rutz Modular characters with Blender 3D - Tutorial](https://www.youtube.com/watch?v=CwLsJB8GrEU), 2nd video [@Andi_Rutz Modular characters with Blender 3D - Tutorial](https://www.youtube.com/watch?v=I98_U1k7pmk)
 
 [@grabbitt Making a Low Poly Modular Monster in Blender](https://www.youtube.com/watch?v=jNfjtu9pb5M)
 
-[o3de.org docs](https://development--o3deorg.netlify.app/docs/user-guide/visualization/animation/actor-multiple-skin/)
+[o3de.org docs](https://development--o3deorg.netlify.app/docs/user-guide/visualization/animation/actor-multiple-skin/) about actor multiple skins.
 
 [@CGDive BEGINNER Blender Rigging Course (2026)](https://www.youtube.com/watch?v=Ldki5txSn5U)
 
@@ -202,6 +202,12 @@ Weight Paint: [@OzzO_Official Weight Painting in Blender](https://www.youtube.co
 [@stefan_3d_ai Modular Character with AI (Full Workflow)](https://www.youtube.com/watch?v=gZIxrX1n2D4)
 
 [Blender Addon: Human generator and editor](https://extensions.blender.org/add-ons/mpfb/) is a good starting point to create characters. Blender 5.2 asset library has a few default models too.
+
+---
+
+### Organisation of files, folders, projects
+
+Project and Files organisation: [@PierrickPicaut_P2DESIGN Everything about Linking & Overrides in blender](https://www.youtube.com/watch?v=z-KH-zmV79I), [@PierrickPicaut_P2DESIGN Master Production Workflow in Blender](https://www.youtube.com/watch?v=JckDEblB7gc)
 
 ---
 
