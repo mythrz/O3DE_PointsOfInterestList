@@ -419,6 +419,7 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 [@rzDmyth Open 3D Engine: UI dynamic slices (Inventory)](https://www.youtube.com/watch?v=HZbuklTPfvA)
 
+[GitHub TuRml Gem](https://github.com/Tuyuji/TuRml) (unknown state of use for production)
 
 --- 
 
