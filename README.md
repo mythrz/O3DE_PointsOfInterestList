@@ -456,6 +456,8 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 [Porcupine-Factory - SaveLoad](https://github.com/Porcupine-Factory/SaveLoad). Save Load Gem licensed under the Expat license
 
+[GitHub Project Sqlgen](https://github.com/getml/sqlgen) is a C++ open source project (ORM and SQL query generator). This is one of the few projects I found with a compatible license. (Untested inside O3DE)
+
 ---
 
 ### Extend Editor Tools or functionality
