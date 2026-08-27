@@ -205,6 +205,8 @@ Weight Paint: [@OzzO_Official Weight Painting in Blender](https://www.youtube.co
 
 [@extra3d537 Retargeting Animations In Blender ](https://www.youtube.com/watch?v=rMfNiQIJTPM) Retarget animations from one armature to another using Rokoko
 
+[@PierrickPicaut_P2DESIGN Retarget Characters Animations to Multiple Rigs in Blende](https://www.youtube.com/watch?v=r-7Q21_CbIQ) Retarget when certain conventions are met
+
 ---
 
 ### Organisation of files, folders, projects
