@@ -203,6 +203,8 @@ Weight Paint: [@OzzO_Official Weight Painting in Blender](https://www.youtube.co
 
 [Blender Addon: Human generator and editor](https://extensions.blender.org/add-ons/mpfb/) is a good starting point to create characters. Blender 5.2 asset library has a few default models too.
 
+[@extra3d537 Retargeting Animations In Blender ](https://www.youtube.com/watch?v=rMfNiQIJTPM) Retarget animations from one armature to another using Rokoko
+
 ---
 
 ### Organisation of files, folders, projects
