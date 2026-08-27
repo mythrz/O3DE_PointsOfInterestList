@@ -207,6 +207,8 @@ Weight Paint: [@OzzO_Official Weight Painting in Blender](https://www.youtube.co
 
 [@PierrickPicaut_P2DESIGN Retarget Characters Animations to Multiple Rigs in Blende](https://www.youtube.com/watch?v=r-7Q21_CbIQ) Retarget when certain conventions are met
 
+[Mwni Blender Animation Retargeting](https://github.com/Mwni/blender-animation-retargeting). This is a free addon available on GitHub to retarget animations from one armature to another.
+
 ---
 
 ### Organisation of files, folders, projects
