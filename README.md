@@ -425,7 +425,7 @@ Part 1 [@3dteacher O3DE UI Editor Creating a Start Menu](https://www.youtube.com
 
 [@rzDmyth Open 3D Engine: UI dynamic slices (Inventory)](https://www.youtube.com/watch?v=HZbuklTPfvA)
 
-[GitHub TuRml Gem](https://github.com/Tuyuji/TuRml) (unknown state of use for production)
+Unknown state of use for production: [GitHub TuRml Gem](https://github.com/Tuyuji/TuRml) [GitHub AtomRml Gem](https://github.com/Atmosaero/AtomRml). These two gems are based on [GitHub RmlUi](https://github.com/mikke89/RmlUi)
 
 --- 
 
