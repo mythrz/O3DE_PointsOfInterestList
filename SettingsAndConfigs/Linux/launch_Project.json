@@ -2,17 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Game",
+            "name": "Game (Clang)",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/linux/bin/profile/NameOfYourProject.GameLauncher",
+            "program": "${workspaceFolder}/build/linux_clang/bin/profile/NameOfYourProject.GameLauncher",
             "cwd":"${fileDirname}"
         },
         {
-            "name": "Editor",
+            "name": "Editor (Clang)",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/linux/bin/profile/Editor",
+            "program": "${workspaceFolder}/build/linux_clang/bin/profile/Editor",
             "cwd":"${fileDirname}",
             
             /// This is a fix for Arch-Linux. Use only if the Editor-UI has strange dimensions
@@ -23,21 +23,21 @@
             }
         },
         {
-            "name": "NameOfYourGem Tests",
+            "name": "NameOfYourGem Tests (Clang)",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/linux/bin/profile/AzTestRunner",
+            "program": "${workspaceFolder}/build/linux_clang/bin/profile/AzTestRunner",
             "args": [
-                "${workspaceFolder}/build/linux/bin/profile/NameOfYourGem.Tests.so",
+                "${workspaceFolder}/build/linux_clang/bin/profile/NameOfYourGem.Tests.so",
                 "AzRunUnitTests"
             ],
             "console": "integratedTerminal",
         },
         {
-            "name": "Material Editor",
+            "name": "Material Editor (Clang)",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/linux/bin/profile/MaterialEditor",
+            "program": "${workspaceFolder}/build/linux_clang/bin/profile/MaterialEditor",
             "cwd":"${fileDirname}",
             
             "env": {
@@ -47,10 +47,68 @@
             }
         },
         {
-            "name": "Material Canvas",
+            "name": "Material Canvas (Clang)",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/linux/bin/profile/MaterialCanvas",
+            "program": "${workspaceFolder}/build/linux_clang/bin/profile/MaterialCanvas",
+            "cwd":"${fileDirname}",
+            
+            "env": {
+                "QT_AUTO_SCREEN_SCALE_FACTOR": "0",
+                "QT_ENABLE_HIGHDPI_SCALING": "1",
+                "QT_FONT_DPI": "96"
+            }
+        },
+        {
+            "name": "Game (GCC)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/linux_gcc/bin/profile/NameOfYourProject.GameLauncher",
+            "cwd":"${fileDirname}"
+        },
+        {
+            "name": "Editor (GCC)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/linux_gcc/bin/profile/Editor",
+            "cwd":"${fileDirname}",
+            
+            /// This is a fix for Arch-Linux. Use only if the Editor-UI has strange dimensions
+            "env": {
+                "QT_AUTO_SCREEN_SCALE_FACTOR": "0",
+                "QT_ENABLE_HIGHDPI_SCALING": "1",
+                "QT_FONT_DPI": "96"
+            }
+        },
+        {
+            "name": "NameOfYourGem Tests (GCC)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/linux_gcc/bin/profile/AzTestRunner",
+            "args": [
+                "${workspaceFolder}/build/linux_gcc/bin/profile/NameOfYourGem.Tests.so",
+                "AzRunUnitTests"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Material Editor (GCC)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/linux_gcc/bin/profile/MaterialEditor",
+            "cwd":"${fileDirname}",
+            
+            "env": {
+                "QT_AUTO_SCREEN_SCALE_FACTOR": "0",
+                "QT_ENABLE_HIGHDPI_SCALING": "1",
+                "QT_FONT_DPI": "96"
+            }
+        },
+        {
+            "name": "Material Canvas (GCC)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/linux_gcc/bin/profile/MaterialCanvas",
             "cwd":"${fileDirname}",
             
             "env": {

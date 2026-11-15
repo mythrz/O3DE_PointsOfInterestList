@@ -380,16 +380,17 @@ python/get_python.sh
 
 create a copy of the existing CMakePresets.json file so the file is in the same root; rename it to CMakeUserPresets.json and copy past the content.
 
-Check if "cmake.useCMakePresets" is set to "always" or "auto". CTRL+SHIFT+P -> Cmake: Select Configure Preset, and the presets should be there, choose Linux Clang Ninja (Custom). IF NOT, reboot your PC, delete the CmakeUserPresets.json and try again (It does not always work at first try).
+Check if "cmake.useCMakePresets" is set to "always" or "auto". CTRL+SHIFT+P -> Cmake: Select Configure Preset, and the presets should be there, choose `Linux Clang Ninja (Custom)` (or `GCC Ninja (Custom)` if you want to build with GCC). IF NOT, reboot your PC, delete the CmakeUserPresets.json and try again (It does not always work at first try).
 
-If the IDE addons to configure and build are not working due to updates, delete the build/linux folder and do it manually (cmake updates or addon updates rarely break, but when they do they do not tell why... they just report a CMake crash with segfault).
+If the IDE addons to configure and build are not working due to updates, delete the `build/linux_clang` folder (or `build/linux_gcc` for GCC) and do it manually (cmake updates or addon updates rarely break, but when they do they do not tell why... they just report a CMake crash with segfault). Note: never reuse the same build folder when switching between Clang and GCC.
 
-After the configure (Linux Clang Ninja (Custom)), you can build (Build Editor Profile (Custom))
+After the configure (`Linux Clang Ninja (Custom)`), you can build (`Build Editor Profile (Custom)`), or for GCC use `Build Editor Profile (Custom GCC)`.
 
 
 
 ### C. If you are using a terminal instead of an IDE to config and build try this, else skip to point D.
 
+**Clang (recommended / officially supported on Linux):**
 ```
 cmake --preset custom-linux-clang-ninja
 ```
@@ -399,7 +400,7 @@ or
 cmake \
   -G "Ninja Multi-Config" \
   -S /home/yourUserName/O3DE/Engines/development/o3de \
-  -B /home/yourUserName/O3DE/Engines/development/o3de/build/linux \
+  -B /home/yourUserName/O3DE/Engines/development/o3de/build/linux_clang \
   -DLY_3RDPARTY_PATH=$HOME/O3DE/o3de-packages \
   -DCMAKE_EXPORT_COMPILE_COMMANDS=OFF \
   -DCMAKE_UNITY_BUILD=OFF \
@@ -407,7 +408,7 @@ cmake \
   -DCMAKE_CXX_FLAGS="-Wno-error -Wno-warnings"
 ```
 
-- Build
+- Build (Clang)
 
 ```
 cmake --build --preset build-editor-profile
@@ -415,7 +416,42 @@ cmake --build --preset build-editor-profile
 or
 ```
 cmake \
-  --build /home/yourUserName/O3DE/Engines/development/o3de/build/linux \
+  --build /home/yourUserName/O3DE/Engines/development/o3de/build/linux_clang \
+  --target Editor \
+  --config profile \
+  --verbose
+```
+
+**GCC (experimental — uses `O3DE_EXTRA_*_FLAGS="-w"` to avoid `-Werror` breaks on latest GCC):**
+```
+cmake --preset custom-linux-gcc-ninja
+```
+or
+
+```
+cmake \
+  -G "Ninja Multi-Config" \
+  -S /home/yourUserName/O3DE/Engines/development/o3de \
+  -B /home/yourUserName/O3DE/Engines/development/o3de/build/linux_gcc \
+  -DCMAKE_C_COMPILER=/usr/bin/gcc \
+  -DCMAKE_CXX_COMPILER=/usr/bin/g++ \
+  -DLY_3RDPARTY_PATH=$HOME/O3DE/o3de-packages \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=OFF \
+  -DCMAKE_UNITY_BUILD=ON \
+  -DPAL_TRAIT_BUILD_TESTS_SUPPORTED=TRUE \
+  -DO3DE_EXTRA_C_FLAGS="-w" \
+  -DO3DE_EXTRA_CXX_FLAGS="-w"
+```
+
+- Build (GCC)
+
+```
+cmake --build --preset build-editor-profile-gcc
+```
+or
+```
+cmake \
+  --build /home/yourUserName/O3DE/Engines/development/o3de/build/linux_gcc \
   --target Editor \
   --config profile \
   --verbose
@@ -439,9 +475,10 @@ Open your VSCodium/Code, open the new project folder, copy the cmakeUserPresets,
 
 If you want to do it in the command line, do this instead, otherwise skip to F.
 
+**Clang:**
 ```
 cmake -G "Ninja Multi-Config" \
-  -B build/linux \
+  -B build/linux_clang \
   -DLY_3RDPARTY_PATH="$HOME/O3DE/o3de-packages" \
   -DCMAKE_EXPORT_COMPILE_COMMANDS=OFF \
   -DCMAKE_UNITY_BUILD=OFF \
@@ -449,7 +486,25 @@ cmake -G "Ninja Multi-Config" \
 ```
 
 ```
-cmake --build build/linux --config profile --target Editor NameOfYourProject.GameLauncher
+cmake --build build/linux_clang --config profile --target Editor NameOfYourProject.GameLauncher
+```
+
+**GCC:**
+```
+CPATH=/usr/include/minizip cmake -G "Ninja Multi-Config" \
+  -B build/linux_gcc \
+  -DCMAKE_C_COMPILER=/usr/bin/gcc \
+  -DCMAKE_CXX_COMPILER=/usr/bin/g++ \
+  -DLY_3RDPARTY_PATH="$HOME/O3DE/o3de-packages" \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=OFF \
+  -DCMAKE_UNITY_BUILD=ON \
+  -DPAL_TRAIT_BUILD_TESTS_SUPPORTED=TRUE \
+  -DO3DE_EXTRA_C_FLAGS="-w" \
+  -DO3DE_EXTRA_CXX_FLAGS="-w"
+```
+
+```
+cmake --build build/linux_gcc --config profile --target Editor NameOfYourProject.GameLauncher
 ```
 
 ### E.2 (O3DE) Debugging
@@ -467,6 +522,8 @@ This should be the setting that copies the compile_commands.json... But it is no
 "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json"
 ```
 
+*(If you built with GCC, select the `(GCC)` launch configurations in `.vscode/launch.json` (`build/linux_gcc`), and add `"--query-driver=/usr/bin/g++"` to `clangd.arguments` if `clangd` has trouble resolving GCC headers. Remember to also update `build/linux_clang` to `build/linux_gcc` in the `.desktop` shortcut below.)*
+
 ### F. How to run it (Arch sometimes presents strange UI dimensions)
 
 Create a new shortcut. 
@@ -480,7 +537,7 @@ or set [nvidia-drm.modeset=1](https://github.com/mythrz/O3DE_PointsOfInterestLis
 Name=O3DE Dev Editor
 GenericName=
 Comment=
-Exec=env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_ENABLE_HIGHDPI_SCALING=1 QT_FONT_DPI=96 /home/yourUserName/O3DE/Projects/NameOfYourProject/build/linux/bin/profile/Editor
+Exec=env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_ENABLE_HIGHDPI_SCALING=1 QT_FONT_DPI=96 /home/yourUserName/O3DE/Projects/NameOfYourProject/build/linux_clang/bin/profile/Editor
 Type=Application
 Icon=application-x-desktop
 Terminal=false

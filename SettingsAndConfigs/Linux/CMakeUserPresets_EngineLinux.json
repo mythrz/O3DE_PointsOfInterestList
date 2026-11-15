@@ -19,7 +19,7 @@
             "name": "custom-linux-clang-ninja",
             "displayName": "Clang Ninja (Custom)",
             "generator": "Ninja Multi-Config",
-            "binaryDir": "${sourceDir}/build/linux",
+            "binaryDir": "${sourceDir}/build/linux_clang",
             "cacheVariables": {
                 "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages-dev",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF", // ON if you want it on the project folders
@@ -66,7 +66,7 @@
             "jobs": 4
         },
         {
-            "name": "build-editor-profile",
+            "name": "build-editor-profile-gcc",
             "displayName": "Build Editor Profile (Custom GCC)",
             "configurePreset": "custom-linux-gcc-ninja",
             "targets": ["Editor"],

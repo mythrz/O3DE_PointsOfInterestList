@@ -18,7 +18,7 @@
             "name": "custom-linux-clang-ninja",
             "displayName": "Linux Clang Ninja (Custom)",
             "generator": "Ninja Multi-Config",
-            "binaryDir": "${sourceDir}/build/linux",
+            "binaryDir": "${sourceDir}/build/linux_clang",
             "environment": { // archlinux has trouble in finding these installed libs. Add this block as a work around
                 "CXXFLAGS": "-I/usr/include/minizip",
                 "CFLAGS": "-I/usr/include/minizip",
@@ -73,10 +73,10 @@
             "jobs": 4 // adjust to your cores or remove
         },
         {
-            "name": "build-editor-profile",
+            "name": "build-editor-profile-gcc",
             "displayName": "Build Editor Profile (Custom GCC)",
             "configurePreset": "custom-linux-gcc-ninja",
-            "targets": ["Editor"],
+            "targets": ["Editor", "NameOfYourProject.GameLauncher"],
             "configuration": "profile",
             "jobs": 4 // adjust to your cores or remove
         }
