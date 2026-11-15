@@ -30,6 +30,27 @@
                 "CMAKE_UNITY_BUILD": "OFF", // You can turn this ON after the first build, or keep it OFF
                 "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE"
             }
+        },
+        {
+            "name": "custom-linux-gcc-ninja",
+            "displayName": "GCC Ninja (Custom)",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/linux_gcc",
+            "environment": { // archlinux has trouble in finding these installed libs. Add this block as a work around
+                "CXXFLAGS": "-I/usr/include/minizip",
+                "CFLAGS": "-I/usr/include/minizip",
+                "CPATH": "/usr/include/minizip"
+            },
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "LY_3RDPARTY_PATH": "$env{HOME}/O3DE/o3de-packages-dev",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "OFF",
+                "CMAKE_UNITY_BUILD": "ON",
+                "PAL_TRAIT_BUILD_TESTS_SUPPORTED": "TRUE",
+                "O3DE_EXTRA_C_FLAGS": "-w",
+                "O3DE_EXTRA_CXX_FLAGS": "-w"
+            }
         }
     ],
     "buildPresets":[
@@ -40,7 +61,7 @@
             "configurePreset": "custom-linux-clang-ninja",
             "targets": ["Editor", "NameOfYourProject.GameLauncher"],
             "configuration": "debug",
-            "jobs": 8 // adjust to your cores or remove
+            "jobs": 4 // adjust to your cores or remove
         },
         {
             "name": "build-editor-and-AzTestRunner-profile",
@@ -49,7 +70,15 @@
             "configurePreset": "custom-linux-clang-ninja",
             "targets": ["Editor", "NameOfYourProject.GameLauncher", "AzTestRunner", "AtomCore.Tests"],
             "configuration": "debug",
-            "jobs": 8 // adjust to your cores or remove
+            "jobs": 4 // adjust to your cores or remove
+        },
+        {
+            "name": "build-editor-profile",
+            "displayName": "Build Editor Profile (Custom GCC)",
+            "configurePreset": "custom-linux-gcc-ninja",
+            "targets": ["Editor"],
+            "configuration": "profile",
+            "jobs": 4 // adjust to your cores or remove
         }
     ]
 }
